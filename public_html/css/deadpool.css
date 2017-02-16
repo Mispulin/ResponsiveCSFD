@@ -1,0 +1,313 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.3.2016, 13:41:51
+    Author     : Mish.k.a
+*/
+
+.box {
+    max-width: none;
+}
+
+.box-2 {
+    margin-top: 10px;
+}
+
+.box-2:last-of-type {
+    margin-bottom: 10px;
+}
+
+.box-2 .header span {
+    display: block;
+    background-color: #DDD;
+    padding: 2px 10px;
+}
+
+.box-2 .content {
+    background-color: #EEE;
+    padding: 5px 10px;
+}
+
+.box-2:nth-of-type(1) .content > a, .box-2:nth-of-type(2) .content > a {
+    text-align: center;
+    display: block;
+    margin-top: 5px;
+}
+
+.box-2:nth-of-type(1) > .content, .box-2:nth-of-type(2) > .content {
+    font-weight: bold;
+}
+
+.box-2 > .content {
+    font-weight: normal;
+}
+
+.box-2 > .content .row > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.links {
+    margin-top: 10px;
+}
+
+.r {
+    color: grey;
+    float: left;
+    margin-top: 5px;
+}
+
+.toggle, .toggle-first, .toggle-second, .toggle-videos {
+    float: right;
+}
+
+
+.no-rating {
+    color: grey;
+    font-style: italic;
+    font-weight: normal;
+    margin: 5px auto;
+}
+
+#rating {
+    margin: 5px auto;
+}
+
+.change-rating, .delete-rating, .add-rating {
+    font-weight: normal;
+    color: #1C5B90;
+    cursor: pointer;
+    text-align: right;
+}
+
+.star-selector {
+    margin: 0 auto;
+    width: 115px;
+}
+
+.star-selector ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border: solid 1px;
+    background-color: white;
+}
+
+.star-selector ul li:hover {
+    background-color: #EEE;
+}
+
+.garbage {
+    font-size: 1.5em;
+}
+
+.related {
+    list-style-type: none;
+    padding-left: 0 !important;
+}
+
+.fans-list .stars {
+    float: right;
+    top: 2px;
+}
+
+.box-2 .content > span {
+    text-align: center;
+    display: block;
+}
+
+.right-column > div {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.right-column > div:nth-of-type(1) {
+    padding-right: 5px;
+}
+
+.right-column > div:nth-of-type(2) {
+    padding-left: 5px;
+}
+
+.main-columns:nth-of-type(2n+1) .row {
+    margin: 0;
+}
+
+.details {
+    width: 167%;
+    width: 500px;
+}
+
+h1 {
+    font-family: Tahoma,Arial,Verdana;
+    font-size: 1.3em;
+    margin-top: 3%;
+    font-weight: bold;
+}
+
+.embed-responsive-4by3 {
+    padding-bottom: 56.4%;
+}
+
+.video-footer span:nth-of-type(2) {
+    float: right;
+}
+
+p {
+    padding-top: 0;
+}
+
+.comments-list {
+    list-style-position: inside;
+    list-style-type: none;
+    padding: 0 !important;
+    font-weight: normal;
+}
+
+.comments-list span {
+    font-weight: bold;
+}
+
+.comments-list li {
+    border-bottom: 1px solid #DDD;
+    padding: 10px 14px;
+}
+
+.comments-list div[class|="col"] {
+    padding: 0;
+}
+
+.comments-list div[class|="col"]:nth-of-type(2) {
+    text-align: right;
+}
+
+.makers .content, .makers a, .makers {
+    font-weight: normal;
+}
+
+.makers .head {    
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+.posters {
+    overflow-x: auto;
+}
+
+#poster-area {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding: 0 30px 10px 0;
+}
+
+#poster-area h2 {
+    display: inline;
+}
+
+#poster-area span {
+    float: right;
+    font-weight: normal;
+}
+
+.profile {
+    border-radius: 10px;
+    background-color: #DDDDDD;
+    padding: 10px !important;
+    border: 10px solid #B01;
+    border-width: 10px 0 0 0;
+    margin: 0px 0 10px 0;
+}
+
+.profile .img {
+    float: left;
+    margin-right: 3%;
+    text-align: center;
+    font-weight: normal;
+}
+
+.profile .info {
+    margin-left: 125px;
+    padding-left: 23px;
+}
+
+#myRating .box-2 {
+    margin-bottom: 0;
+}
+
+#myRating > div, #myRating .col-xs-8, #myRating .col-xs-2, #myRating .col-xs-4 {
+    padding: 0 !important;
+}
+
+.ratings {
+    border-radius: 10px;
+    background-color: #B01;
+    padding: 10px;
+}
+
+.ratings a {
+    color: white;
+    display: inline-block;
+    width: 49%;
+}
+
+.ratings span:nth-child(2n+1) {
+    text-align: right;
+}
+
+.ratings .rating {
+    font-size: 2em;
+    display: block;
+    color: white;
+    text-align: center !important;
+    margin-bottom: 5px;
+}
+
+.main-columns:nth-of-type(2n) {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.main-columns:nth-of-type(2n+1) {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 310px) {
+    .profile {
+        font-size: 0.7em;
+    }
+}
+
+@media (max-width: 767px) {
+ 
+    .profile {
+        margin-top: 10px;
+        height: 220px;
+    }
+    
+    .ratings a {        
+        font-size: 0.85em;
+    }
+        
+}
+
+@media (min-width: 768px) {
+    
+    .main-columns:nth-of-type(2n) {
+        padding-left: 12px;
+        padding-right: 5px;
+    }
+
+    .main-columns:nth-of-type(2n+1) {
+        padding-left: 5px;
+        padding-right: 11px;
+    }
+    
+    .rating {
+        font-size: 3.5em !important;
+    }
+
+}

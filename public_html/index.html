@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Hlavní strana</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="http://img.csfd.cz/assets/b1740/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./csfd_files/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./csfd_files/print.css" media="print">        
+        <link rel="stylesheet" href="./css/bootstrap.css">     
+        <link rel="stylesheet" href="./css/slide.css">    
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/main-menu.css">
+        <link rel="stylesheet" href="./css/search-area.css">
+        <link rel="stylesheet" href="./css/user-menu.css">  
+        <link rel="stylesheet" href="./css/box-area.css">
+    </head>
+    <body class="slide-push">        
+
+        <div id="page-wrapper" class="container-fluid">
+
+            <div id="page-header">
+                <div id="search-area" class="search-area slide slide-horizontal slide-top hidden-sm hidden-md hidden-lg">
+                    <form action="http://www.csfd.cz/hledat/" method="get" novalidate="">
+                        <div class="input-group">                            
+                            <input type="text" name="q" class="form-control" placeholder="Hledat">
+                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                        <a class="advanced-search hidden-xs" href="http://www.csfd.cz/podrobne-vyhledavani/">podrobné vyhledávání →</a>
+                    </form>
+                </div>
+                <div class="row">
+                    <div id="header-menu-icon" class="col-xs-2 hidden-sm hidden-md hidden-lg">
+                        <button id="main-menu-trigger"><span class="glyphicon glyphicon-menu-hamburger"></span></button>                        
+                    </div>
+                    <div id="header-user-icon" class="col-xs-2 show hidden-sm hidden-md hidden-lg">
+                        <button id="user-menu-trigger"><span class="glyphicon glyphicon-user"></span></button>
+                        <button id="user-menu-logged-trigger" class="hide"><span class="glyphicon glyphicon-user"></span></button>
+                    </div>
+                    <div id="header-logo" class="col-xs-6 col-sm-5 show">
+                        <img src="./img/logo.png" id="logo" class="img-responsive center-block" alt="Logo">
+                    </div>
+                    <div id="header-search-icon" class="col-xs-2 show hidden-sm hidden-md hidden-lg">
+                        <button id="search-trigger"><span id="search-icon" class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                    <div class="search-area hidden-xs col-sm-3">
+                        <form action="http://www.csfd.cz/hledat/" method="get" novalidate="">
+                            <div class="input-group">                            
+                                <input id="mainSearch" type="text" name="q" class="form-control" placeholder="Hledat">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                <button class="btn btn-default hidden-sm hidden-md hidden-lg" id="close" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+                            </div>
+                            <a class="advanced-search hidden-xs" href="http://www.csfd.cz/podrobne-vyhledavani/">podrobné vyhledávání →</a>
+                        </form>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 menu-col">
+                        <div id="user-area">
+                            <div id="user-menu" class="main-menu slide slide-vertical slide-left">
+                                <h4 class="hidden-xs">Uživatelská zóna</h4>
+                                <ul>
+                                    <li>
+                                        <a id="login">Přihlásit</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.csfd.cz/videa/" target="_blank">Registrovat</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.csfd.cz/televize/" target="_blank">Ztracené heslo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="user-menu-logged" class="main-menu slide slide-vertical slide-left hide-menu">
+                                <img src="./img/user-photo.jpg" class="img-responsive user-photo hidden-xs" alt="User Photo">
+                                <ul>
+                                    <li>
+                                        <a href="./index.html">Hlavní strana</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Uživatel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Pošta</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Oblíbení</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Chci vidět</a>
+                                    </li>                    
+                                    <li>
+                                        <a href="#" class="private">Soukromé</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Nastavení</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Přítomní</a>
+                                    </li>
+                                    <li>
+                                        <a id="logout">Odhlásit</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row menu-row">
+
+                    <div class="col-xs-6 col-sm-12">
+                        <div id="main-menu" class="main-menu slide slide-vertical slide-left">
+                            <ul>
+                                <li class="hidden-sm hidden-md hidden-lg">
+                                    <a href="./index.html">Hlavní strana</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/novinky/" target="_blank">Novinky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/videa/" target="_blank">Videa</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/televize/" target="_blank">Televize</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/kino/" target="_blank">Kino</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/filmy-online/" target="_blank">Filmy online</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/dvd-a-bluray/" target="_blank">DVD & Blu-ray</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/tvurci/" target="_blank">Tvůrci</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/zebricky/" target="_blank">Žebříčky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/filmoteky/" target="_blank">Filmotéky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/uzivatele/" target="_blank">Uživatelé</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/diskuze/" target="_blank">Diskuze</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-content">
+
+                <div class="row widgets">
+
+                    <div class="col-xs-12 col-md-9 main-columns">
+                        <div class="box hidden-xs hidden-sm">
+                            <div class="header carousel row">
+                                <div class="col-md-12">
+                                    <span>Nová videa</span>
+                                </div>
+                            </div>                   
+                            <div class="content row">
+                                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    </ol>
+
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <a href="http://www.csfd.cz/film/390447-demolition/" target="_blank">
+                                                <img src="./img/video_1.jpg" class="img-responsive" alt="Video 1">
+                                                <div class="carousel-caption">
+                                                    <h1>Demoliton (2015)</h1>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="item">
+                                            <a href="http://www.csfd.cz/film/368671-captain-america-obcanska-valka/" target="_blank">   
+                                                <img src="./img/video_2.jpg" class="img-responsive" alt="Video 2">
+                                                <div class="carousel-caption">
+                                                    <h1>Captain America: Občanská válka (2016)</h1>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="item">
+                                            <a href="http://www.csfd.cz/film/390018-the-other-side-of-the-door/" target="_blank">
+                                                <img src="./img/video_3.jpg" class="img-responsive" alt="Video 3">
+                                                <div class="carousel-caption">
+                                                    <h1>The Other Side of the Door (2016)</h1>
+                                                </div>
+                                            </a>
+                                        </div>
+
+                                        <div class="item">
+                                            <a href="http://www.csfd.cz/film/263138-hra-o-truny/417499/" target="_blank">
+                                                <img src="./img/video_4.jpg" class="img-responsive" alt="Video 4">
+                                                <div class="carousel-caption">
+                                                    <h1>Hra o trůny - Série 6 (2016)</h1>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="footer"></div>
+                        </div>
+
+                        <div class="col-sm-6 sub-columns hidden-xs">
+                            <div class="box">
+                                <div class="header row">
+                                    <div class="col-sm-12">
+                                        <span>Žhavé filmy online</span>
+                                    </div>
+                                </div>
+                                <div class="content hot-tips row">
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="https://www.alza.cz/media/cesta-do-rima-d4054694.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/film_online_1.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="https://www.alza.cz/media/cesta-do-rima-d4054694.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/alza.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="https://www.alza.cz/media/room-d4071823.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/film_online_2.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="https://www.alza.cz/media/room-d4071823.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/alza.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="https://www.alza.cz/media/ovecka-shaun-ve-filmu-d4071824.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/film_online_3.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="https://www.alza.cz/media/ovecka-shaun-ve-filmu-d4071824.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/alza.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="https://www.alza.cz/media/amy-d3991248.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/film_online_4.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="https://www.alza.cz/media/amy-d3991248.htm?kampan=csfd.cz_odkaz&utm_source=csfd.cz&utm_medium=odkaz&utm_campaign=csfd.cz_odkaz">
+                                            <img src="./img/alza.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 sub-columns hidden-xs">
+                            <div class="box">
+                                <div class="header row">
+                                    <div class="col-sm-12">
+                                        <span>Žhavé DVD tipy</span>
+                                    </div>
+                                </div>
+                                <div class="content hot-tips row">
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="http://filmy.heureka.cz/vinari-dvd/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/dvd_1.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="http://filmy.heureka.cz/vinari-dvd/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/buy.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="http://filmy.heureka.cz/ztraceni-v-mnichove-dvd/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/dvd_2.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="http://filmy.heureka.cz/ztraceni-v-mnichove-dvd/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/buy.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="http://filmy.heureka.cz/divergence-dvd_3/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/dvd_3.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="http://filmy.heureka.cz/divergence-dvd_3/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/buy.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <a target="_blank" href="http://filmy.heureka.cz/kobry-a-uzovky-dvd/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/dvd_4.jpg" class="img-responsive" alt="Film Online Photo">
+                                        </a>
+                                        <a target="_blank" href="http://filmy.heureka.cz/kobry-a-uzovky-dvd/#utm_source=csfd.cz&utm_medium=cooperation&utm_campaign=csfd_movies_feed">
+                                            <img src="./img/buy.png" class="img-responsive alza-play" alt="Alza Play Icon">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="footer"></div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 sub-columns">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="box news">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span><a href="http://www.csfd.cz/novinky/" target="_blank">Novinky</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">                                            
+                                            <div class="col-xs-12 movie-info">
+                                                <div class="news-image">
+                                                    <img src="./img/news-photo.jpg" class="img-responsive" alt="News Photo Icon">
+                                                </div>
+                                                <h4>Jump Street vs. Muži v černém</h4>
+                                                <p>Když se na konci roku 2014 začalo mluvit o crossoveru Jump Streetu
+                                                    a Mužů v černém, všichni to brali jako podivný vtip. Záhy se ale ukázalo,
+                                                    že je tenhle koncept reálně ve hře, protože by jím studio Sony mohlo pokračovat v jumpstreetovské… (<a href="http://www.csfd.cz/novinky/" target="_blank">více</a>)</p>
+                                            </div>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="box tv-tips">
+                                        <div class="header row">
+                                            <div class="col-xs-11">
+                                                <span><a href="http://www.csfd.cz/televize/" target="_blank">TV tipy dne</a></span>
+                                            </div>
+                                            <div class="col-xs-1">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="widget-list">
+                                                <li class="row">
+                                                    <div class="col-xs-12">
+                                                        <div class="news-image hidden-xs">
+                                                            <img src="./img/superman.jpg" class="img-responsive" alt="Superman Photo">
+                                                        </div>
+                                                        <div>
+                                                            <a href="http://www.csfd.cz/film/287908-superhvezda-superman/" target="_blank"><span class="blue"></span>
+                                                                Superhvězda Superman</a>
+                                                            <span>(2011)</span>
+                                                        </div>
+                                                        <div class="tv-info first">
+                                                            Nova Cinema 04:30
+                                                        </div>
+                                                        <div class="movie-info hidden-xs">                                                        
+                                                            <p>
+                                                                Lex Luthor, plný hněvu a žárlivosti, spřádá rafinovaný plán,
+                                                                jak zabít muže z oceli – a ten plán funguje. Superman je otráven
+                                                                sluneční radiací a umírá. V týdnech, které mu zbývají, chce naplnit
+                                                                své životní sny, především odhalit svou skutečnou identitu Lois Laneové ... 
+                                                            </p>
+                                                        </div>
+                                                    </div>   
+                                                </li>
+                                                <li class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/180956-ostrov/" target="_blank"><span class="red"></span>
+                                                            Ostrov</a>
+                                                        <span>(2005)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Nova Cinema 09:45
+                                                    </div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/304099-misto-cinu-mnichov-lovecka-sezona/" target="_blank"><span class="blue"></span>
+                                                            Místo činu: Mnichov ...</a>
+                                                        <span>(2011)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Prima 10:25
+                                                    </div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/9478-prijdu-hned/" target="_blank"><span class="red"></span>
+                                                            Přijdu hned</a>
+                                                        <span>(1942)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        ČT1 07:40
+                                                    </div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/44447-columbo-plany-poplach/" target="_blank"><span class="red"></span>
+                                                            Columbo: Planý poplach</a>
+                                                        <span>(1990)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Barrandov 10:50
+                                                    </div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/222473-v-zamku-a-podzamci/" target="_blank"><span class="red"></span>
+                                                            V zámku a podzámčí</a>
+                                                        <span>(1981)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        ČT1 14:10
+                                                    </div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/134254-collateral/" target="_blank"><span class="red"></span>
+                                                            Collateral</a>
+                                                        <span>(2004)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Nova 22:05
+                                                    </div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/390877-citizenfour-obcan-snowden/" target="_blank"><span class="red"></span>
+                                                            Citizenfour: Občan Snowden</a>
+                                                        <span>(2014)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        ČT2 23:40
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 hidden-xs">
+                                    <div class="box new-videos">
+                                        <div class="header row">
+                                            <div class="col-sm-12">
+                                                <span><a href="http://www.csfd.cz/videa/" target="_blank">Nová videa</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="widget-list">
+                                                <li class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/368671-captain-america-obcanska-valka/videa/?type=1&video=157711414#highlight-video-157711414" target="_blank">
+                                                            <span class="grey"></span>
+                                                            Captain America: Občanská válka</a>
+                                                        <span>(2016)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Trailer 2
+                                                    </div>
+                                                </li>
+                                                <li class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/263138-hra-o-truny/417499/videa/?type=1&video=157711276#highlight-video-157711276" target="_blank">
+                                                            <span class="grey"></span>
+                                                            Hra o trůny - Série 6</a>
+                                                        <span>(2016)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Trailer 3
+                                                    </div>
+                                                </li>
+                                                <li class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/390447-demolition/videa/?type=1&video=157711225#highlight-video-157711225" target="_blank">
+                                                            <span class="grey"></span>
+                                                            Demolition</a>
+                                                        <span>(2015)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Trailer
+                                                    </div>
+                                                </li>
+                                                <li class="row">
+                                                    <div class="col-xs-12">
+                                                        <a href="http://www.csfd.cz/film/390018-the-other-side-of-the-door/videa/?type=1&video=157711224#highlight-video-157711224" target="_blank">
+                                                            <span class="grey"></span>
+                                                            The Other Side of the Door</a>
+                                                        <span>(2016)</span>
+                                                    </div>
+                                                    <div class="col-xs-12 tv-info">
+                                                        Trailer
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 hidden-xs">
+                                    <div class="box">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span><a href="http://www.csfd.cz/komentare/" target="_blank">Nejnovější komentáře k filmům</a></span>
+                                            </div>
+                                        </div>
+                                        <div class="content comment row">
+                                            <div class="col-xs-12">
+                                                <span><a href="http://www.csfd.cz/uzivatel/503229-zuzanka/">Zuzanka</a> - <a href="http://www.csfd.cz/film/343221-tore-tanci/">Tore tančí</a> (2013) </span><img class="stars" alt="stars" src="./img/5.gif">
+                                            </div>
+                                            <div class="col-xs-12">
+                                                ufff, tolik hnoje v jednom životě......proč si to dobrovolně volíme.....ano další pokřivení
+                                                dogmatismem církve jak potřebuje, abychom slepě věřili a nenacházeli skutečnou hlubší podstatu za slovy....
+                                                víra s absencí fanatismu volila by jinak..." Buďte opatrní jako hadi a bezelstní jako holubice."
+                                                Smutný a velmi těžký film.  (<a href="http://www.csfd.cz/novinky/" target="_blank">více</a>)
+                                            </div>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 sub-columns">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <div class="header row">
+                                            <div class="col-xs-11">
+                                                <span>Startuje v kinech</span>
+                                            </div>
+                                            <div class="col-xs-1">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="widget-list">
+                                                <li class="row">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/396771-ve-stinu-zen/" target="_blank">
+                                                                <span class="blue"></span>Ve stínu žen
+                                                            </a>
+                                                            <span>(2015)</span>                        
+                                                        </p> 
+                                                    </div>                  
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>
+                                                <li class="row">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/405321-denik-komorne/" target="_blank">
+                                                                <span class="blue"></span>Deník komorné
+                                                            </a>
+                                                            <span>(2015)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>                                    
+                                                <li class="row hide">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/374793-grimsby/" target="_blank">
+                                                                <span class="red"></span>Grimsby
+                                                            </a>
+                                                            <span>(2016)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/9474-pohadka-maje/" target="_blank">
+                                                                <span class="blue"></span>Pohádka máje
+                                                            </a>
+                                                            <span>(1940)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/385272-rudy-kapitan/" target="_blank">
+                                                                <span class="grey"></span>Rudý kapitán
+                                                            </a>
+                                                            <span>(2016)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/368714-serie-divergence-aliance/" target="_blank">
+                                                                <span class="grey"></span>Divergence: Aliance
+                                                            </a>
+                                                            <span>(2016)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/398799-uz-je-tady-zas/" target="_blank">
+                                                                <span class="red"></span>Už je to tady zas
+                                                            </a>
+                                                            <span>(2015)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">10.3.2016</div>
+                                                </li>
+                                                <li class="row hide">
+                                                    <div class="col-xs-7">
+                                                        <p>
+                                                            <a href="http://www.csfd.cz/film/423878-jonas-kaufmann-vecer-s-puccinim/" target="_blank">
+                                                                <span class="grey"></span>Jonas Kaufmann - Večer s ...
+                                                            </a>
+                                                            <span>(2015)</span>
+                                                        </p>
+                                                    </div>
+                                                    <div class="right date col-xs-4">8.3.2016</div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <div class="header row">
+                                            <div class="col-xs-11">
+                                                <span>Nejnavštěvovanější filmy</span>
+                                            </div>
+                                            <div class="col-xs-1">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="widget-list">
+                                                <li>
+                                                    <p>
+                                                        <a href="./deadpool.html">
+                                                            <span class="red"></span>Deadpool
+                                                        </a>
+                                                        <span>(2016)</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/374793-grimsby/" target="_blank">
+                                                            <span class="red"></span>Grimsby
+                                                        </a>
+                                                        <span>(2016)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/362228-osm-hroznych/" target="_blank">
+                                                            <span class="red"></span>Osm hrozných
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/384732-dokonaly-sef/" target="_blank">
+                                                            <span class="blue"></span>Dokonalý šéf
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/369047-kobry-a-uzovky/" target="_blank">
+                                                            <span class="red"></span>Kobry a užovky
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/180956-ostrov/" target="_blank">
+                                                            <span class="red"></span>Ostrov
+                                                        </a>
+                                                        <span>(2005)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/398799-uz-je-tady-zas/" target="_blank">
+                                                            <span class="red"></span>Už je to tady zas
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/8083-maratonec/" target="_blank">
+                                                            <span class="red"></span>Maratónec
+                                                        </a>
+                                                        <span>(1976)</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <div class="header row">
+                                            <div class="col-xs-11">
+                                                <span>Nejnavštěvovanější tvůrci</span>
+                                            </div>
+                                            <div class="col-xs-1">
+                                                <span class="toggle hidden-sm hidden-md hidden-lg">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="widget-list actors">
+                                                <li>
+                                                    <p>
+                                                        <a href="./jennifer-lawrence.html">
+                                                            Jennifer Lawrence
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/769-leonardo-dicaprio/" target="_blank">
+                                                            Leonardo DiCaprio
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/158-natalie-portman/" target="_blank">
+                                                            Natalie Portman
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/331-johnny-depp/" target="_blank">
+                                                            Johnny Depp
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/515-jennifer-aniston/" target="_blank">
+                                                            Jennifer Aniston
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/5-brad-pitt/" target="_blank">
+                                                            Brad Pitt
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/2240-keira-knightley/" target="_blank">
+                                                            Keira Knightley
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/tvurce/60-orlando-bloom/" target="_blank">
+                                                            Orlando Bloom
+                                                        </a>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <div class="header row">
+                                            <div class="col-xs-11">
+                                                <span>Nejnavštěvovanější videa</span>
+                                            </div>
+                                            <div class="col-xs-1">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="widget-list">
+                                                <li>
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/398799-uz-je-tady-zas/videa/" target="_blank">
+                                                            <span class="red"></span>Už je tady zas
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>
+                                                        <a href="http://www.csfd.cz/film/344871-batman-v-superman-usvit-spravedlnosti/videa/" target="_blank">
+                                                            <span class="grey"></span>Batman v Superman: Úsvit ...
+                                                        </a>
+                                                        <span>(2016)</span>
+                                                    </p>
+                                                </li>                                    
+                                                <li class="hide">
+                                                    <p>
+
+                                                        <a href="http://www.csfd.cz/film/369047-kobry-a-uzovky/" target="_blank">
+                                                            <span class="red"></span>Kobry a užovky
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+
+                                                        <a href="http://www.csfd.cz/film/402246-ocista-volebni-rok/videa/" target="_blank">
+                                                            <span class="grey"></span>Očista: Volební rok
+                                                        </a>
+                                                        <span>(2016)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+
+                                                        <a href="http://www.csfd.cz/film/393557-muj-kamarad-drak/videa/" target="_blank">
+                                                            <span class="grey"></span>Můj kamarád drak
+                                                        </a>
+                                                        <span>(2016)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+
+                                                        <a href="http://www.csfd.cz/film/349283-bohove-egypta/videa/" target="_blank">
+                                                            <span class="blue"></span>Bohové Egypta
+                                                        </a>
+                                                        <span>(2016)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+
+                                                        <a href="http://www.csfd.cz/film/396786-vzmuz-se/videa/" target="_blank">
+                                                            <span class="red"></span>Vzmuž se
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                                <li class="hide">
+                                                    <p>
+
+                                                        <a href="http://www.csfd.cz/film/390440-kolonie/videa/" target="_blank">
+                                                            <span class="grey"></span>Kolonie
+                                                        </a>
+                                                        <span>(2015)</span>
+                                                    </p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 hidden-xs hidden-sm main-columns">
+                        <div class="row">
+                            <div class="col-sm-6 col-md-12">
+                                <div class="csfd-cinema">
+                                    <div class="header">
+                                        <a href="http://www.csfd.cz/kino/schedule/#cinema-110"><h3>ČSFD Sál</h3></a>
+                                        <a href="http://www.cinestar.cz/cz/ostrava/domu"><img class="cinestar" src="./img/cinestar.png" alt="cinestar"></a>
+                                    </div>
+                                    <div class="content">
+                                        <div class="cinema">
+                                            <a href="http://www.csfd.cz/kino/schedule/#cinema-110">Praha - Anděl</a>
+                                        </div>
+                                        <ul class="films">
+                                            <li class="film">
+                                                <a href="http://www.csfd.cz/film/249974-danska-divka/">
+                                                    <img src="./img/kino_1.jpg" alt="Dánská dívka">
+                                                </a>
+                                                <div class="info">
+                                                    <a href="http://www.csfd.cz/film/249974-danska-divka/">Dánská dívka</a><br>
+                                                    <span>12:20 </span> <span> 18:00</span>
+                                                </div>
+                                            </li>
+                                            <li class="film">
+                                                <a href="http://www.csfd.cz/film/249974-danska-divka/">
+                                                    <img src="./img/kino_2.jpg" alt="Saulův syn">
+                                                </a>
+                                                <div class="info">
+                                                    <a href="http://www.csfd.cz/film/249974-danska-divka/">Saulův syn</a><br>
+                                                    <span>15:50 </span> <span> 20:30</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="more">
+                                            <a href="http://www.csfd.cz/csfd-sal/">více o ČSFD Sálu</a>
+                                        </div>
+                                    </div>
+                                    <div class="footer"></div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 col-md-12">
+                                <div class="box radio">
+                                    <div class="header row">
+                                        <div class="col-sm-12">
+                                            <span>Filmové rádio</span>                                                
+                                        </div>
+                                    </div>
+                                    <div class="content row">
+                                        <div class="melody">
+                                            <a target="_blank" href="http://www.koule.cz/player/melodie/" class="player" data-width="660" data-height="610"></a>
+                                            <div class="melody-info">
+                                                <a target="_blank" href="http://www.csfd.cz/film/5407-osviceni/" class="title marquee"><div class="marquee-inner">Wendy Carlos</div></a>
+                                                <span class="artist marquee">Shining, The</span>                                                    
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="box">
+                                    <div class="header row">
+                                        <div class="col-sm-12">
+                                            <span>Ostatní</span>                                                
+                                        </div>
+                                    </div>
+                                    <div class="content row">
+                                        <div class="col-sm-5 col-md-12 others">
+                                            <div class="row">
+                                                <div class="col-sm-12 others">
+                                                    <a target="_blank" href="http://www.csfd.cz/soutez/339/"><span class="soutez">Soutěž</span>
+                                                        <img class="img-responsive special" src="./img/imax.jpg" alt="imax"></a>
+                                                    <a target="_blank" href="http://www.csfd.cz/oceneni/">
+                                                        <img class="img-responsive special" src="./img/awards.png" alt="awards">
+                                                    </a>
+                                                    <a target="_blank" href="http://www.csfd.cz/bazar/">
+                                                        <img class="img-responsive special" src="./img/bazar.png" alt="bazar">
+                                                    </a>
+                                                    <a target="_blank" href="http://www.csfd.cz/kanon-filmu/">
+                                                        <img class="img-responsive special" src="./img/kanon.png" alt="kanon">
+                                                    </a>
+                                                </div>
+                                                <div class="col-sm-12 list-menu hidden-sm">
+                                                    <ul class="footer-menu">
+                                                        <li class="hide"><a target="_blank" href="http://www.csfd.cz/navod-k-pouziti/">Návod k použití</a></li>
+                                                        <li><a target="_blank" href="http://www.csfd.cz/provozovatel-a-redakce/">Provozovatel a redakce</a></li>
+                                                        <li><a target="_blank" href="http://www.csfd.cz/reklama-a-marketing/">Reklama a marketing</a></li>
+                                                        <li><a target="_blank" href="http://www.csfd.cz/postradam-zde/">Postrádám zde</a></li>
+                                                        <li><a target="_blank" href="http://www.csfd.cz/kontakt/">Napište nám</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-7 col-md-12">
+                                            <h2>ČSFD.cz v číslech</h2>
+                                            <span class="csfd-label">Filmů v databázi:</span><span class="csfd-number">429 375</span>
+                                            <span class="csfd-label">Herců v databázi:</span><span class="csfd-number">152 898</span>
+                                            <span class="csfd-label">Režisérů v databázi:</span><span class="csfd-number">43 449</span><br>
+
+                                            <span class="csfd-label">Reg. uživatelů:</span><span class="csfd-number">434 166</span>
+                                            <span class="csfd-label">Komentářů k filmům:</span><span class="csfd-number">3 274 833</span>
+                                            <span class="csfd-label">Filmů se zajímavostmi:</span><span class="csfd-number">28 828</span>
+                                            <span class="csfd-label">Filmů s galerií:</span><span class="csfd-number">82 833</span><br>
+
+                                            <span class="csfd-label">Obsahů filmů:</span><span class="csfd-number">129 916</span>
+                                            <span class="csfd-label">Biografií tvůrců:</span><span class="csfd-number">21 467</span>
+                                            <span class="csfd-label">Filmových plakátů:</span><span class="csfd-number">352 206</span>
+                                            <span class="csfd-label">Filmových videí:</span><span class="csfd-number">53 296</span>
+                                        </div>
+                                    </div>
+                                    <div class="footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div id="page-footer">
+                <div class="row footer-menu">
+                    <div class="col-xs-12 centered">
+                        <a href="http://www.csfd.cz/provozovatel-a-redakce/" target="_blank">Provozovatel a redakce</a>
+                        <span class="hidden-xs">| <a href="http://www.csfd.cz/reklama-a-marketing/">Reklama a marketing</a></span>
+                    </div>
+                    <div class="col-xs-12 centered">
+                        <a href="http://www.csfd.cz/navod-k-pouziti/" target="_blank">FAQ</a>
+                        <span>|</span>
+                        <span class="hidden-xs hide"><a  target="_blank" href="http://www.csfd.cz/navod-k-pouziti/">Návod k použití</a> |</span>
+                        <span class="hidden-xs"><a  target="_blank" href="http://www.csfd.cz/postradam-zde/">Postrádám zde</a> |</span>
+                        <a href="http://www.csfd.cz/kontakt/" target="_blank">Napište nám</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>  
+
+        <script type="text/javascript" charset="utf-8" src="./js/jquery-2.2.0.min.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="./js/bootstrap.min.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="./js/main.js"></script> 
+        <script src="./js/classie.js"></script>
+    </body>
+</html>

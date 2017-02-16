@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Deadpool</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="http://img.csfd.cz/assets/b1740/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./csfd_files/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./csfd_files/print.css" media="print">        
+        <link rel="stylesheet" href="./css/bootstrap.css">     
+        <link rel="stylesheet" href="./css/slide.css">    
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/main-menu.css">
+        <link rel="stylesheet" href="./css/search-area.css">
+        <link rel="stylesheet" href="./css/user-menu.css">
+        <link rel="stylesheet" href="./css/box-area.css">
+        <link rel="stylesheet" href="./css/tabs.css">
+        <link rel="stylesheet" href="./css/deadpool.css">
+    </head>
+    <body class="slide-push">        
+
+        <div id="page-wrapper" class="container-fluid">
+
+            <div id="page-header">
+                <div id="search-area" class="search-area slide slide-horizontal slide-top hidden-sm hidden-md hidden-lg">
+                    <form action="http://www.csfd.cz/hledat/" method="get" novalidate="">
+                        <div class="input-group">                            
+                            <input type="text" name="q" class="form-control" placeholder="Hledat">
+                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                        <a class="advanced-search hidden-xs" href="http://www.csfd.cz/podrobne-vyhledavani/">podrobné vyhledávání →</a>
+                    </form>
+                </div>
+                <div class="row">
+                    <div id="header-menu-icon" class="col-xs-2 hidden-sm hidden-md hidden-lg">
+                        <button><span id="main-menu-trigger" class="glyphicon glyphicon-menu-hamburger"></span></button>                        
+                    </div>
+                    <div id="header-user-icon" class="col-xs-2 show hidden-sm hidden-md hidden-lg">
+                        <button id="user-menu-trigger"><span class="glyphicon glyphicon-user"></span></button>
+                        <button id="user-menu-logged-trigger" class="hide"><span class="glyphicon glyphicon-user"></span></button>
+                    </div>
+                    <div id="header-logo" class="col-xs-6 col-sm-5 show">
+                        <img src="./img/logo.png" id="logo" class="img-responsive center-block" alt="Logo">
+                    </div>
+                    <div id="header-search-icon" class="col-xs-2 show hidden-sm hidden-md hidden-lg">
+                        <button id="search-trigger"><span id="search-icon" class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                    <div class="search-area hidden-xs col-sm-3">
+                        <form action="http://www.csfd.cz/hledat/" method="get" novalidate="">
+                            <div class="input-group">                            
+                                <input id="mainSearch" type="text" name="q" class="form-control" placeholder="Hledat">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                <button class="btn btn-default hidden-sm hidden-md hidden-lg" id="close" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+                            </div>
+                            <a class="advanced-search hidden-xs" href="http://www.csfd.cz/podrobne-vyhledavani/">podrobné vyhledávání →</a>
+                        </form>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 menu-col">
+                        <div id="user-area">
+                            <div id="user-menu" class="main-menu slide slide-vertical slide-left">
+                                <h4 class="hidden-xs">Uživatelská zóna</h4>
+                                <ul>
+                                    <li>
+                                        <a id="login">Přihlásit</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.csfd.cz/videa/" target="_blank">Registrovat</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.csfd.cz/televize/" target="_blank">Ztracené heslo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="user-menu-logged" class="main-menu slide slide-vertical slide-left hide-menu">
+                                <img src="./img/user-photo.jpg" class="img-responsive user-photo hidden-xs" alt="User Photo">
+                                <ul>
+                                    <li>
+                                        <a href="./index.html">Hlavní strana</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Uživatel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Pošta</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Oblíbení</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Chci vidět</a>
+                                    </li>                    
+                                    <li>
+                                        <a href="#" class="private">Soukromé</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Nastavení</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Přítomní</a>
+                                    </li>
+                                    <li>
+                                        <a id="logout">Odhlásit</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row menu-row">
+
+                    <div class="col-xs-6 col-sm-12">
+                        <div id="main-menu" class="main-menu slide slide-vertical slide-left">
+                            <ul>
+                                <li class="hidden-sm hidden-md hidden-lg">
+                                    <a href="./index.html">Hlavní strana</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/novinky/" target="_blank">Novinky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/videa/" target="_blank">Videa</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/televize/" target="_blank">Televize</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/kino/" target="_blank">Kino</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/filmy-online/" target="_blank">Filmy online</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/dvd-a-bluray/" target="_blank">DVD & Blu-ray</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/tvurci/" target="_blank">Tvůrci</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/zebricky/" target="_blank">Žebříčky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/filmoteky/" target="_blank">Filmotéky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/uzivatele/" target="_blank">Uživatelé</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/diskuze/" target="_blank">Diskuze</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-content">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-sm-push-7 col-md-4 col-md-push-8 main-columns">
+                        <div class="row">
+                            <div class="ratings col-xs-12">
+                                <span class="rating">86 %</span>
+                                <span><a href="http://www.csfd.cz/zebricky/nejlepsi-filmy/?show=complete#highlight-chart-261379" target="_blank">139. nejlepší film</a></span>
+                                <span><a href="http://www.csfd.cz/zebricky/nejoblibenejsi-filmy/?show=complete#highlight-chart-261379" target="_blank">173. nejoblíbenější film</a></span>
+                                <span class="hidden-sm hidden-md hidden-lg"><a href="http://www.csfd.cz/film/261379-deadpool/komentare/?expandUserList=1" target="_blank">Hodnocení uživatelů</a></span>
+                                <span class="hidden-sm hidden-md hidden-lg"><a href="http://www.csfd.cz/film/261379-deadpool/komentare/?expandUserList=1" target="_blank">Fanklub filmu</a></span>
+                            </div>
+                            <div id="myRating" class="hide">
+                                <div class="col-xs-12 box-2">
+                                    <div class="header">
+                                        <div class="row">
+                                            <div class="col-xs-8">
+                                                <span>Moje hodnocení</span>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <span class="add-rating">přidat</span>
+                                            </div>
+                                            <div class="col-xs-2 hide">
+                                                <span class="change-rating">změnit</span>
+                                            </div>
+                                            <div class="col-xs-2 hide">
+                                                <span class="delete-rating">smazat</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="content">
+                                        <span class="no-rating">není zadáno hodnocení</span>
+                                        <span id="rating"></span>
+                                        <div class="star-selector hide">
+                                            <ul>
+                                                <li id="5">
+                                                    <img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*">
+                                                </li>
+                                                <li id="4">
+                                                   <img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"> 
+                                                </li>
+                                                <li id="3">
+                                                   <img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*"> 
+                                                </li>
+                                                <li id="2">
+                                                    <img src="img/star.gif" alt="*"><img src="img/star.gif" alt="*">
+                                                </li>
+                                                <li id="1">
+                                                    <img src="img/star.gif" alt="*">
+                                                </li>
+                                                <li id="0">
+                                                    <span class="garbage">odpad!</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden-xs right-column">
+                                <div class="col-sm-7 box-2">
+                                    <div class="header">
+                                        <span>Hodnocení uživatelů</span>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="fans-list">
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/1-pomo/">POMO</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/1263-kleopatra/">kleopatra</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                            
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/38-cival/">Cival</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/195357-verbal/">verbal</a>
+                                                <img class="stars" src="img/3.gif" alt="stars">
+                                            </li>                                         
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/4-douglas/">Douglas</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                        
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/69-kocour/">kOCOUR</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/604-gemini/">Gemini</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/1537-blizzard/">Blizzard</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/2008-matty/">Matty</a>
+                                                <img class="stars" src="img/4.gif" alt="stars">
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/1069-isherwood/">Isherwood</a>
+                                                <img class="stars" src="img/3.gif" alt="stars">
+                                            </li>   
+                                        </ul>
+                                        <a href="http://www.csfd.cz/film/261379-deadpool/recenze/?expandUserList=1" target="_blank">všichni fanoušci</a>
+                                        <span>(16 007)</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-5 box-2">
+                                    <div class="header">
+                                        <span>Fanklub filmu</span>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="fans-list">
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/261917-meanwhile/oblibene-filmy/">MeanWhile</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/243433-j009/oblibene-filmy/">J009</a>
+                                            </li>                                            
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/138020-kleopetra/oblibene-filmy/">kleopetra</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/263746-alexrockhardy/oblibene-filmy/">AlexRockHardy</a>
+                                            </li>                                         
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/274052-paulina01/oblibene-filmy/">Paulina01</a>
+                                            </li>                                        
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/308552-ffilipcz/oblibene-filmy/">FFilipCZ</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/54175-butcher-of-blaviken/oblibene-filmy/">Butcher of Blaviken</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/292167-dc125/oblibene-filmy/">dc125</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/139326-googlak/oblibene-filmy/">Googlak</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/220547-espana/oblibene-filmy/">espana</a>
+                                            </li>   
+                                        </ul>
+                                        <a href="http://www.csfd.cz/film/261379-deadpool/recenze/?expandUserList=1" target="_blank">všichni fanoušci</a>
+                                        <span>(1 052)</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 box-2">
+                                    <div class="header">
+                                        <span>Premiéry</span>
+                                    </div>
+                                    <div class="content">
+                                        <span class="r">Nevhodný mládeži do 15 let</span><br>
+                                        <div class="row"></div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <img src="img/cz.gif" class="no-title" title="Česko" alt="Česko" >
+                                                V kinech od:
+                                            </div>
+                                            <div class="col-sm-7">
+                                                11.02.2016 CinemArt CZ
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <img src="img/sk.gif" class="no-title" title="Slovensko" alt="Slovensko" >
+                                                V kinech od:
+                                            </div>
+                                            <div class="col-sm-7">
+                                                11.02.2016 CinemArt SK
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-sm-5">
+                                                <img src="img/usa.gif" class="no-title" title="USA" alt="USA" >
+                                                V kinech od:
+                                            </div>
+                                            <div class="col-sm-7">
+                                                12.02.2016 20th Century Fox
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 links">
+                                    <ul class="social">
+                                        <li class="twitter">
+                                            <a href="https://twitter.com/intent/tweet?text=Deadpool%20-%20http%3A%2F%2Fwww.csfd.cz%2Ffilm%2F261379%2F" target="_blank" title="Sdílet na Twitteru" data-width="550" data-height="350"></a>
+                                        </li>
+                                        <li class="fb">
+                                            <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.csfd.cz%2Ffilm%2F261379-deadpool%2F" target="_blank" title="Sdílet na Fasebooku"></a>
+                                        </li>
+                                        <li>
+                                            <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.csfd.cz%2Ffilm%2F261379-deadpool%2F&layout=button_count&show_faces=false&width=95&action=like&font=arial&colorscheme=light&height=21&locale=cs_CZ"
+					scrolling="no" frameborder="0" height="21" width="95" allowTransparency="true"></iframe>
+                                        </li>
+                                    </ul>
+                                    <ul class="web-pages">
+                                        <li class="imdb">
+                                            <a href="http://www.imdb.com/title/tt1431045/combined" target="_blank" title="Profil na IMDB.com"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-12 box-2">
+                                    <div class="header">
+                                        <span>Související</span>
+                                    </div>
+                                    <div class="content">
+                                        <ul class="related">
+                                            <li>
+                                                <a href="/film/307702-x-force/"><span class="grey"></span>X-Force</a> <span>(2018)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/373252-gambit/"><span class="grey"></span>Gambit</a> <span>(2017)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/370872-untitled-wolverine-sequel/"><span class="grey"></span>Untitled Wolverine Sequel</a> <span>(2017)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/358916-x-men-apokalypsa/"><span class="grey"></span>X-Men: Apokalypsa</a> <span>(2016)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/317342-x-men-budouci-minulost/"><span class="red"></span>X-Men: Budoucí minulost</a> <span>(2014)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/265275-wolverine/"><span class="blue"></span>Wolverine</a> <span>(2013)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/251188-x-men-prvni-trida/"><span class="red"></span>X-Men: První třída</a> <span>(2011)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/224880-x-men-origins-wolverine/"><span class="red"></span>X-Men Origins: Wolverine</a> <span>(2009)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/194903-x-men-posledni-vzdor/"><span class="red"></span>X-Men: Poslední vzdor</a> <span>(2006)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/40326-x-men-2/"><span class="red"></span>X-Men 2</a> <span>(2003)</span>
+                                            </li>
+                                            <li>
+                                                <a href="/film/8412-x-men/"><span class="red"></span>X-Men</a> <span>(2000)</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 box-2">
+                                    <div class="header">
+                                        <span>Tagy</span>
+                                    </div>
+                                    <div class="content">
+                                        <a href="/podrobne-vyhledavani/?tag=47&amp;_form_=film#highlight-tagcontrol">láska</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=68&amp;_form_=film#highlight-tagcontrol">pomsta</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=65&amp;_form_=film#highlight-tagcontrol">podle komiksu</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=100&amp;_form_=film#highlight-tagcontrol">únos</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=171&amp;_form_=film#highlight-tagcontrol">superhrdina</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=204&amp;_form_=film#highlight-tagcontrol">Marvel Comics</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=488&amp;_form_=film#highlight-tagcontrol">mučení</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=214&amp;_form_=film#highlight-tagcontrol">nájemný vrah</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=167&amp;_form_=film#highlight-tagcontrol">nevyléčitelná nemoc</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=109&amp;_form_=film#highlight-tagcontrol">mutanti</a>, 
+                                        <a href="/podrobne-vyhledavani/?tag=452&amp;_form_=film#highlight-tagcontrol">pokusy na lidech</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col-xs-12 col-sm-7 col-sm-pull-5 col-md-8 col-md-pull-4 main-columns">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="profile">
+                                    <div class="img">
+                                        <img src="./img/deadpool.jpg" class="centered" alt="Deadpool"><br>
+                                        <span id="show-posters"><a href="#">všechny plakáty</a> (4)</span>
+                                    </div>
+                                    <div class="info">
+                                        <h1>Deadpool</h1>
+                                        <img src="img/usa.gif" alt="USA" title="USA" class="no-title"><span> &nbsp; Deadpool</span><br>
+                                        <img src="img/sk.gif" alt="Slovensko" title="Slovensko" class="no-title"><span> &nbsp; Deadpool</span><br><br>
+                                        <span>Akční / Dobrodružný / Komedie / Sci-Fi</span><br>
+                                        <span>USA / Kanada, 2016, 108 min</span><br>
+                                        <span class="makers hidden-xs">
+                                            <span class="head">Režie:</span><a href="http://www.csfd.cz/tvurce/49190-tim-miller/" target="_blank">Tim Miller</a><br>
+                                            <span class="head">Scénář:</span><a href="http://www.csfd.cz/tvurce/73408-rhett-reese/" target="_blank">Rhet Reese</a>, <a href="http://www.csfd.cz/tvurce/73409-paul-wernick/" target="_blank">Paul Wernick</a><br>
+                                            <span class="head">Kamera:</span><a href="http://www.csfd.cz/tvurce/98315-ken-seng/" target="_blank">Ken Seng</a><br>
+                                            <span class="head">Hudba:</span><a href="http://www.csfd.cz/tvurce/84231-junkie-xl/" target="_blank">Junkie XL</a><br>
+                                            <span class="head">Hrají:</span><a href="/tvurce/13034-ryan-reynolds/">Ryan Reynolds</a>, 
+                                            <a href="/tvurce/33085-morena-baccarin/">Morena Baccarin</a>, 
+                                            <a href="/tvurce/89548-ed-skrein/">Ed Skrein</a>, <a href="/tvurce/40107-t-j-miller/">T.J. Miller</a>, 
+                                            <a href="/tvurce/122919-karan-soni/">Karan Soni</a>, <a href="/tvurce/133090-michael-benyaer/">Michael Benyaer</a>, 
+                                            <a href="/tvurce/227790-stefan-kapicic/">Stefan Kapicic</a>, 
+                                            <a href="/tvurce/185516-brianna-hildebrand/">Brianna Hildebrand</a>, 
+                                            <a href="/tvurce/227795-style-dayne/">Style Dayne</a>, <a href="/tvurce/227803-kyle-cassie/">Kyle Cassie</a><span class="rest-of-makers hide">, <a href="/tvurce/227814-taylor-hickson/">Taylor Hickson</a>, 
+                                                <a href="/tvurce/227816-ayzee/">Ayzee</a>, <a href="/tvurce/227817-naika-toussaint/">Naika Toussaint</a>, 
+                                                <a href="/tvurce/211578-randal-reeder/">Randal Reeder</a>, 
+                                                <a href="/tvurce/227823-isaac-c-singleton-jr/">Isaac C. Singleton Jr.</a>, 
+                                                <a href="/tvurce/227833-justyn-shippelt/">Justyn Shippelt</a>, <a href="/tvurce/227837-donna-yamamoto/">Donna Yamamoto</a>, 
+                                                <a href="/tvurce/82782-jed-rees/">Jed Rees</a>, <a href="/tvurce/227850-hugh-scott/">Hugh Scott</a>, 
+                                                <a href="/tvurce/56522-gina-carano/">Gina Carano</a>, <a href="/tvurce/227852-cindy-piper/">Cindy Piper</a>, 
+                                                <a href="/tvurce/128528-emily-haine/">Emily Haine</a>, <a href="/tvurce/227853-aatash-amir/">Aatash Amir</a>, 
+                                                <a href="/tvurce/226972-chad-riley/">Chad Riley</a>, <a href="/tvurce/227854-paul-belsito/">Paul Belsito</a>, 
+                                                <a href="/tvurce/226373-darcey-johnson/">Darcey Johnson</a>, <a href="/tvurce/95033-leslie-uggams/">Leslie Uggams</a>, 
+                                                <a href="/tvurce/128346-kyle-rideout/">Kyle Rideout</a>, <a href="/tvurce/227855-jason-william-day/">Jason William Day</a>, 
+                                                <a href="/tvurce/12114-stan-lee/">Stan Lee</a>, <a href="/tvurce/227184-ben-wilkinson/">Ben Wilkinson</a>, 
+                                                <a href="/tvurce/227856-rachel-shaw/">Rachel Shaw</a>, <a href="/tvurce/226975-paul-lazenby/">Paul Lazenby</a>, 
+                                                <a href="/tvurce/227858-rob-hayter/">Rob Hayter</a>, <a href="/tvurce/227857-greg-lasalle/">Greg LaSalle</a></span>
+                                            <span class="toggle-makers"> ... (<a>více</a>)</span><br>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="col-xs-12 hidden" id="poster-area">
+                                <div class="box">
+                                    <div class="header row">
+                                        <div class="col-xs-6">
+                                            <h2>Plakáty</h2>
+                                        </div>
+                                        <div class="col-xs-6">
+                                            <span><a href="#" id="hide-posters">skrýt plakáty</a></span>
+                                        </div>                           
+                                    </div>
+                                    <div class="content row posters">                            
+                                        <div class="details">
+                                            <img width="127" height="180" src="http://img.csfd.cz/files/images/film/posters/160/413/160413205_d99b89.jpg?h180" alt="Deadpool">
+                                            <img width="101" height="180" src="http://img.csfd.cz/files/images/film/posters/160/413/160413204_9f6e47.jpg?h180" alt="Deadpool">
+                                            <img width="123" height="180" src="http://img.csfd.cz/files/images/film/posters/160/407/160407777_155abe.jpg?h180" alt="Deadpool">
+                                            <img width="123" height="180" src="http://img.csfd.cz/files/images/film/posters/160/407/160407778_784735.jpg?h180" alt="Deadpool">
+                                        </div>
+                                    </div> 
+                                    <div class="footer"></div>
+                                </div>                        
+                            </div> 
+                            <div class="actions col-xs-12">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="makers hidden-sm hidden-md hidden-lg" role="presentation"><a href="#makers-tab" id="makers" role="tab" data-toggle="tab">tvůrci</a></li>
+                                    <li class="active obsah" role="presentation"><a href="#obsah-tab" id="obsah" role="tab" data-toggle="tab">obsah</a></li>                                    
+                                    <li class="dropdown hidden-sm hidden-md hidden-lg" id="drop" role="presentation">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ostatní &nbsp;▼</a>                                        
+                                        <ul class="main-menu dropdown-menu" role="tablist">
+                                            <li class="trivia"><a href="#comments-tab" role="tab" data-toggle="tab">komentáře</a></li>
+                                            <li class="trivia"><a href="#trivia-tab" role="tab" data-toggle="tab">zajímavosti</a></li>
+                                            <li class="videos"><a href="#videos-tab" role="tab" data-toggle="tab">videa</a></li>
+                                            <li class="gallery"><a href="#gallery-tab" role="tab" data-toggle="tab">galerie</a></li>
+                                            <li class="review"><a href="#review-tab" role="tab" data-toggle="tab">ext. recenze</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="comments hidden-xs" role="presentation"><a href="#comments-tab" id="comments" role="tab" data-toggle="tab">komentáře</a></li>
+                                    <li class="trivia hidden-xs" role="presentation"><a href="#trivia-tab" id="trivia" role="tab" data-toggle="tab">zajímavosti</a></li>
+                                    <li class="videos hidden-xs" role="presentation"><a href="#videos-tab" id="videos" role="tab" data-toggle="tab">videa</a></li>
+                                    <li class="gallery hidden-xs" role="presentation"><a href="#gallery-tab" id="gallery" role="tab" data-toggle="tab">galerie</a></li>
+                                    <li class="review hidden-xs" role="presentation"><a href="#review-tab" id="contact" role="tab" data-toggle="tab">ext. recenze</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane box" id="makers-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Tvůrci</span>
+                                            </div>
+                                        </div>
+                                        <div class="content makers">
+                                            <span class="head">Režie:</span><a href="http://www.csfd.cz/tvurce/49190-tim-miller/" target="_blank">Tim Miller</a><br>
+                                            <span class="head">Scénář:</span><a href="http://www.csfd.cz/tvurce/73408-rhett-reese/" target="_blank">Rhet Reese</a>, <a href="http://www.csfd.cz/tvurce/73409-paul-wernick/" target="_blank">Paul Wernick</a><br>
+                                            <span class="head">Kamera:</span><a href="http://www.csfd.cz/tvurce/98315-ken-seng/" target="_blank">Ken Seng</a><br>
+                                            <span class="head">Hudba:</span><a href="http://www.csfd.cz/tvurce/84231-junkie-xl/" target="_blank">Junkie XL</a><br>
+                                            <span class="head">Hrají:</span><a href="/tvurce/13034-ryan-reynolds/">Ryan Reynolds</a>, <a href="/tvurce/33085-morena-baccarin/">Morena Baccarin</a>, <a href="/tvurce/89548-ed-skrein/">Ed Skrein</a>, <a href="/tvurce/40107-t-j-miller/">T.J. Miller</a>, <a href="/tvurce/122919-karan-soni/">Karan Soni</a>, <a href="/tvurce/133090-michael-benyaer/">Michael Benyaer</a>, <a href="/tvurce/227790-stefan-kapicic/">Stefan Kapicic</a>, <a href="/tvurce/185516-brianna-hildebrand/">Brianna Hildebrand</a>, <a href="/tvurce/227795-style-dayne/">Style Dayne</a>, <a href="/tvurce/227803-kyle-cassie/">Kyle Cassie</a>, <a href="/tvurce/227814-taylor-hickson/">Taylor Hickson</a>, <a href="/tvurce/227816-ayzee/">Ayzee</a>, <a href="/tvurce/227817-naika-toussaint/">Naika Toussaint</a>, <a href="/tvurce/211578-randal-reeder/">Randal Reeder</a>, <a href="/tvurce/227823-isaac-c-singleton-jr/">Isaac C. Singleton Jr.</a>, <a href="/tvurce/227833-justyn-shippelt/">Justyn Shippelt</a>, <a href="/tvurce/227837-donna-yamamoto/">Donna Yamamoto</a>, <a href="/tvurce/82782-jed-rees/">Jed Rees</a>, <a href="/tvurce/227850-hugh-scott/">Hugh Scott</a>, <a href="/tvurce/56522-gina-carano/">Gina Carano</a>, <a href="/tvurce/227852-cindy-piper/">Cindy Piper</a>, <a href="/tvurce/128528-emily-haine/">Emily Haine</a>, <a href="/tvurce/227853-aatash-amir/">Aatash Amir</a>, <a href="/tvurce/226972-chad-riley/">Chad Riley</a>, <a href="/tvurce/227854-paul-belsito/">Paul Belsito</a>, <a href="/tvurce/226373-darcey-johnson/">Darcey Johnson</a>, <a href="/tvurce/95033-leslie-uggams/">Leslie Uggams</a>, <a href="/tvurce/128346-kyle-rideout/">Kyle Rideout</a>, <a href="/tvurce/227855-jason-william-day/">Jason William Day</a>, <a href="/tvurce/12114-stan-lee/">Stan Lee</a>, <a href="/tvurce/227184-ben-wilkinson/">Ben Wilkinson</a>, <a href="/tvurce/227856-rachel-shaw/">Rachel Shaw</a>, <a href="/tvurce/226975-paul-lazenby/">Paul Lazenby</a>, <a href="/tvurce/227858-rob-hayter/">Rob Hayter</a>, <a href="/tvurce/227857-greg-lasalle/">Greg LaSalle</a><br>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane active box" id="obsah-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Obsah</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Než se stal Deadpoolem, byl Wadem Wilsonem (Ryan Reynolds), bývalým členem speciálních jednotek. Když mu lékaři diagnostikovali pokročilé stadium rakoviny, podrobil se experimentální léčbě v rámci programu Weapon X, známého a populárního především mezi x-menovskými mutanty. Díky tomu se Wade zbavil rakoviny, a nejenže zůstal naživu, ale také jako bonus získal schopnost rychlého samouzdravování. Bohužel však – například oproti Wolverinovi, který po podobné léčbě zůstal celkem sexy – z tohoto pokusu vyšel trvale znetvořený. Vypadá dle vlastních slov jako „avokádo, které mělo sex se starším avokádem". I proto celkem bez většího odporu přijal okostýmované alter ego jménem Deadpool. <b><i>(CinemArt CZ)</i></b></p>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="comments-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-10">
+                                                <span>Komentáře</span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <ul class="comments-list">
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-xs-5">
+                                                            <a href="http://www.csfd.cz/uzivatel/195357-verbal/" target="_blank">verbal </a><img class="stars" src="img/3.gif" alt="stars">
+                                                        </div>
+                                                        <div class="col-xs-7">
+                                                            <a href="http://www.csfd.cz/uzivatel/195357-verbal/komentare/" target="_blank">všechny komentáře uživatele</a>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <p>Sooperméďa. A přesně v souladu s názvem. Poolka filmu je opravdu mrtvá. To jsou ty momenty, kdy se metrosexooální narcis Gájen Gejnolds prochází po přehlídkovém moloo a snaží se vám oorpootně a za každou cenu narvat nagelovanou rookojeť katany mezi poolky. Tehdy dostáváte kýčovitou, místy až debilně felální trapárnoo pro retardy, kombinovanou s dost soochým až noodným dějem a zbytečně sympatickým záporákem. Ale pokood jste třeba nesmírně seriózně beroucí se, sebestředný, slizký, plešatějící emoteplouš jménem Robert, určitě si i tak SMÍCHY naprskáte flitry do popkornoo a samým vzroošením rozmažete řasenkoo. Naštěstí je tu ale ta druhá poolka, a ta je opravdoo výživná! To jsou ty momenty, kdy se Gájen nasouká do pro něj příhodného červeného latexoo a stane se z něj cynický hláškoojící zmrd, který to všem těm otylým čtenářoom omalovánek napálí bez servítkoo přímo do xichtoo. Tehdy dostáváte koolantní a krvavou akcičkoo, napěchovanou brootálními bonbonmoty, trefným popkooltoorním laškováním, ponižováním Xmenů a děláním kokota z Volverína. Škoda jen, že toohle ooroveň neoodrželi celých sto minut, ale jinak po Kikásu a Strážcích galaxie třetí vlaštovka, která ukazooje, že když se leporela pro dyslektiky přestanou brát mentorsky a vážně a necílí na dvanáctileté mentální mootanty či morálně neposqrněné šosácké zroody, moože z toho být solidní taškařice. A moc rád bych v boodoucnu viděl homixový krosouvr Deadpool vs. Kapitán Homokokot: Oosvit oplzlosti.</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="hide">
+                                                    <div class="row">
+                                                        <div class="col-xs-5">
+                                                            <a href="http://www.csfd.cz/uzivatel/4-douglas/" target="_blank">Douglas </a><img class="stars" src="img/4.gif" alt="stars">
+                                                        </div>
+                                                        <div class="col-xs-7">
+                                                            <a href="http://www.csfd.cz/uzivatel/4-douglas/komentare/" target="_blank">všechny komentáře uživatele</a>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <p>Deadpool mě příjemně překvapil. Ne post/pubertálním humorem, ten jsem spíš přežil. Ani ne roztomilou sebeuvědomělostí procesu vyprávění, neb ta patří k základní narativní výbavě současné zábavné fikce. S čím však Deadpool pracuje vskutku důmyslně, je výstavba osnovy jeho vyprávění. Časová pásma, odbočky, situace - staví na nenápadném variování účelně omezeného množství vzorců, takže i přes snahu diváka neustále překvapovat nakonec nepůsobí nestřídmě. Jo, na povrchu jde o romantický příběh na pozadí sebestředné komiksové parodie, ale výstavbou je to vlastně stará dobrá detektivka drsné školy. V lecčem klasičtější než mnohé z těch, které se k této tradici v posledních dekádách hlásí.</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="hide">
+                                                    <div class="row">
+                                                        <div class="col-xs-5">
+                                                            <a href="http://www.csfd.cz/uzivatel/604-gemini/" target="_blank">Gemini</a><img class="stars" src="img/4.gif" alt="stars">
+                                                        </div>
+                                                        <div class="col-xs-7">
+                                                            <a href="http://www.csfd.cz/uzivatel/604-gemini/komentare/" target="_blank">všechny komentáře uživatele</a>
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <p>Titulním hrdinou na plakátech inzerovanou lásku jsem pocítil 15. 2. 2016. A to v rámci fligny, kterou na mne sehrála má drahá choť ve stylu "původní plán padá, ale už máme domluvené hlídání, tak jsem aspoň vybrala kino, z práce doraž do Cinestaru, jdeme na Padesátku"... v tu chvíli bych se samozřejmě nejradši rozvedl od stolu, od lože, a kdyby to šlo (jako že krom společného oddlužení manželů to nejde), tak i od spisu;) O několik hodin později (nechala mě samozřejmě vydusit do poslední minuty, a až těsně před zatměním v sále mi řekla, že místo kokotkoviny se budu moct dívat na bezuzdný pubertální comicsový nářez v poctivém erkovém dizajnu:) A můžu vám říct, že i když jsem tak nějak filmového Deadpoola hlavně skrz trailery registroval, tak že to bude až takhle nekorektní, nedospělé a plné starého dobrého ultranásilí, podaného jako děsná kůlna, to jsem nečekal:) Ryan Reynolds dokazuje, že jeho filmová kariéra asi taky kdysi dostala nějaký mutantí boost, protože přece jenom, vzpomeňte třeba na Bladea III nebo na Zeleného Lampáša... a světe div se, on nejenom, že to rozchodil, ale dokonce rozběhal, a na olympiádě získal zlatou medaili. Ačkoliv rudá by mu asi seděla lépe. Řekněme si to na rovinu, sice jsem se v některých momentech až styděl za to, že mi smíchy tečou slzy, ale nic to nemění na tom, že tenhle naprosto neseriózní a v zásadě jasně prvoplánový pokus vyventilovat nahromaděnou páru politické i jiné rodinnězábavné korektnosti, kterou nás doteď marvelácká vlna (čest výjimkám) zalévala, mě bavil jako už dlouho nic. Takže i když poměr povedenějších a naprosto zbytečných honibrckých vtipů, stejně jako počet záběrů až dětinsky podávaného sexuálního života Wadea Wilsona a Orijské megalomanky Adriy, mi přišly nezvládnuté, stejně se nemůžu donutit jít pod 80%. Se seriózními pokusy o temný (nebo aspoň temnější) comics to samozřejmě nemá nic společného, a chybí tu libové herecké výkony a stylovost Kingsmanů, ale čas od času je takový film přesně to, co potřebuju - a tvůrcům ze srdce přeju každičký vydělaný dolar:)</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="trivia-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Zajímavosti</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <ul class="trivia-list">
+                                                <li>Na rozdíl od filmu, byla pro čtenář Deadpoolova minulost a dokonce i obličej dlouhou dobu záhadou. Deadpool totiž ztratil paměť a vždy nosil masku. (<a href="http://www.csfd.cz/uzivatel/413811-harroc/" target="_blank">Harroc</a>)</li>
+                                                <li>Jedná se o první film od Marvelu, který má v ČR rating R (tedy 15+). (<a href="http://www.csfd.cz/uzivatel/505925-brocololo/" target="_blank">brocololo</a>)</li>
+                                                <li>Kvůli násilí, nahotě a sprostým slovům se Deadpool nepromítal v Číně. Obvykle se Hollywood s cenzory nějak domluví a připraví pro tamější trh sestříhanou verzi. Tentokrát by prý ale muselo z filmu zmizet tolik materiálu, že by přestal dávat smysl. (<a href="http://www.csfd.cz/uzivatel/455940-maulincio/" target="_blank">Maulincio</a>)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="videos-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Videa</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="video-area">
+                                                <div class="embed-responsive embed-responsive-4by3">
+                                                    <video class="embed-responsive-item" controls>
+                                                        <source src="./videos/deadpool.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>  
+                                                <div class="video-footer"><span>Trailer</span> <span>3:13</span></div>
+                                            </div>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="gallery-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-10">
+                                                <span>Galerie</span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <div>
+                                                    <img src="img/d01.jpg" class="img-responsive" alt="1">
+                                                </div>
+                                                <div class="video-footer">
+                                                    <span><a href="http://www.csfd.cz/tvurce/13034-ryan-reynolds/" target="_blank">Ryan Reynolds</a></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="hide">
+                                                <div>
+                                                    <img src="img/d02.jpg" class="img-responsive" alt="1">
+                                                </div>
+                                                <div class="video-footer">
+                                                    <span><a href="http://www.csfd.cz/tvurce/13034-ryan-reynolds/" target="_blank">Ryan Reynolds</a></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="hide">
+                                                <div>
+                                                    <img src="img/d03.jpg" class="img-responsive" alt="1">
+                                                </div>
+                                                <div class="video-footer">
+                                                    <span><a href="http://www.csfd.cz/tvurce/13034-ryan-reynolds/" target="_blank">Ryan Reynolds</a>,
+                                                        <a href="http://www.csfd.cz/tvurce/33085-morena-baccarin/" target="_blank"> Morena Baccarion</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="review-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-10">
+                                                <span>Externí recenze</span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <ul class="comments-list">
+                                                <li>
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <span>AVmania.cz (Marek Čech)</span> <img class="stars" src="img/4.gif" alt="stars">
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <p>"Konverzační komedii, v níž se vedle sebe dobře doplňuje humor černý, cynický, jízlivý či absurdní, režisér kloubí s překvapivě funkční romancí a drsnou eRkovou zábavou, plnou krve, násilí a hromady mrtvol s prostřelenou hlavou nebo useknutými končetinami." (<a href="http://avmania.e15.cz/deadpool-recenze-filmu" target="_blank">více</a>)</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="hide">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <span>Comicbox.eu</span> <img class="stars" src="img/5.gif" alt="stars">
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <p>"Existujú filmy, ktoré v dospelom človeku prebudia jeho vnútorné dieťa (napríklad pixarovky). Deadpool vo vás prebudí vášho vnútorného pubertiaka. Pubertiaka, ktorý sa vyžíva v násilných počítačových hrách, ktorému sa rozžiaria oči pri pohľade na pár kozičiek, ktorý sa ešte stále hrá s hračkami, ale…" (<a target="_blank" href="http://www.comicbox.eu/recenzia-deadpool/">více</a>)</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="hide">
+                                                    <div class="row">
+                                                        <div class="col-xs-12">
+                                                            <span>ČervenýKoberec.cz (Eliška Bartlová)</span> <img class="stars" src="img/5.gif" alt="stars">
+                                                        </div>
+                                                        <div class="col-xs-12">
+                                                            <p>"Jaký tedy vlastně Deadpool je? Je to akční přisprostlá komedie a love story v jednom, která si nebere servítky s nikým a ničím. Je to film, který není pro každého, ale pokud byste se odvážili mít nějaké námitky, ústřední postava vás bez mrknutí oka pošle do p... Pokud máte strach, že takovouto…" (<a target="_blank" href="http://www.cervenykoberec.cz/70718/deadpool-recenze/">více</a>)</p>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>                            
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-footer">
+                <div class="row footer-menu">
+                    <div class="col-xs-12 centered">
+                        <a href="http://www.csfd.cz/provozovatel-a-redakce/" target="_blank">Provozovatel a redakce</a>
+                        <span class="hidden-xs">| <a href="http://www.csfd.cz/reklama-a-marketing/">Reklama a marketing</a></span>
+                    </div>
+                    <div class="col-xs-12 centered">
+                        <a href="http://www.csfd.cz/navod-k-pouziti/" target="_blank">FAQ</a>
+                        <span>|</span>
+                        <span class="hidden-xs hide"><a  target="_blank" href="http://www.csfd.cz/navod-k-pouziti/">Návod k použití</a> |</span>
+                        <span class="hidden-xs"><a  target="_blank" href="http://www.csfd.cz/postradam-zde/">Postrádám zde</a> |</span>
+                        <a href="http://www.csfd.cz/kontakt/" target="_blank">Napište nám</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript" charset="utf-8" src="./js/jquery-2.2.0.min.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="./js/bootstrap.min.js"></script> 
+        <script type="text/javascript" charset="utf-8" src="./js/main.js"></script> 
+        <script src="./js/classie.js"></script>
+    </body>
+</html>

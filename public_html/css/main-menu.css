@@ -1,0 +1,94 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.3.2016, 9:31:50
+    Author     : krizomic
+*/
+
+.main-menu {
+    position: absolute;
+    z-index: 999;
+    max-width: 1100px;
+    background-color: #EEEEEE;
+    border: 10px solid #B01;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 10px 0 10px 0;
+    width: 35%;
+    height: auto;
+    min-width: 200px;
+    box-shadow: 5px 5px 15px black;
+    font-size: 1.3em;
+}
+
+.main-menu h1 {
+    color: white;
+    font-size: 19px;
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+    padding-bottom: 4px;
+}
+
+.main-menu ul {
+    list-style-type: none;
+    background-color: #EEE;
+    padding: 0;
+}
+
+.main-menu li {
+    background-color: #DDDDDD;   
+    margin: 5px 0 5px 0;
+    padding-left: 5px;
+}
+
+.main-menu.show {
+    -webkit-animation: fadeIn 0.3s;
+    animation: fadeIn 0.3s;
+}
+
+@media (min-width: 768px) {
+    
+    .main-menu {
+        display: block !important;
+        width: 100%;
+        left: 0 !important;
+        top: 0 !important;
+        background-color: whitesmoke;
+        border: 1px solid #AFA6A6;
+        box-shadow: none;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        height: auto;
+    }
+    
+    .main-menu li {
+        display: inline;
+        float: left;
+        background-color: #F5F5F5;
+        padding-right: 0.2%;
+        height: 26px;
+        margin: 2px 0 2px 5px;
+    }
+
+    .main-menu a {
+        font-size: 0.86em;
+    }    
+    
+    .menu-row {
+        margin-left: -10px !important;
+        margin-right: -10px !important;
+        height: 0;
+    }
+    
+    
+}
+
+@media (min-width: 766px) {
+    .slide {
+        transition: none;
+    }    
+}

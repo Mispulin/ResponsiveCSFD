@@ -1,0 +1,234 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 7.3.2016, 10:16:16
+    Author     : krizomic
+*/
+
+a, a:hover {
+    color: #BB0011;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: black;
+    font-family: Arial;
+    font-size: 1.2em;
+    font-weight: bold;
+    min-height: 100%;
+}
+
+button {
+    outline: none;
+    background-color: transparent;
+    border: none;
+}
+
+.centered {    
+    text-align: center;
+}
+
+.footer-menu {
+    padding: 4%;
+    margin: 2%;
+}
+
+h2, h3, h4 {
+    font-size: 1em;
+    font-weight: bold;    
+}
+
+h2 {
+    margin-top: 15px;
+}
+
+h3 {
+    display: inline-block;
+    width: 50%;
+    color: white;
+    padding-left: 20px;
+}
+
+h4 {
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+html, body {
+    height: 100%;
+}
+
+#logo {
+    cursor: pointer;
+}
+
+.main-columns {
+    padding-left: 6px;
+    padding-right: 5px;
+}
+
+.main-columns:nth-of-type(2n) {
+    padding-left: 5px;
+    padding-right: 14px;
+}
+
+.others {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+p {
+    display: inline;
+}
+
+#page-content .row {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+#page-footer {
+    background-color: #BB0011;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.2em;
+    font-weight: normal;
+}
+
+#page-footer a {
+    color: #CCCCCC;
+}
+
+#page-footer .footer-menu {
+    padding:0;
+    margin: 0;
+}
+
+#page-footer span {
+    color: white;
+}
+
+#page-wrapper {
+    padding: 0;
+    max-width: 1100px;
+    min-width: 240px;
+}
+
+.stars {
+    position: relative;
+    top: -2px;
+}
+
+.row.show {
+    height: 0;
+}
+
+.show-inline {
+    display: inline-block;
+}
+
+.sub-columns {
+    padding-left: 0;
+    padding-right: 13px;
+}
+
+.sub-columns:nth-of-type(2n+1) {
+    padding-left: 0;
+}
+
+.remove-margin {
+    margin: 0 0 5px 0 !important;
+}
+
+.remove-side-padding {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.right {
+    text-align: right;
+}
+
+ul.footer-menu {
+    list-style-position: inside;
+    border-top: 10px solid #DDDDDD;
+    border-bottom: 10px solid #DDDDDD;
+    margin: 0;
+    padding: 16px;
+}
+
+@media (min-width: 310px) {
+    html, body {
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .sub-columns .col-xs-12 {
+        padding-left: 20px;
+    }
+    
+    #page-content {
+        font-size: 1.2em;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .row {
+        margin-right: -15px;
+        margin-left: -16px;
+    }
+    
+}
+
+@media (min-width: 768px) {    
+
+    #page-footer {
+        padding: 10px 0;
+    }    
+
+    #page-content {
+        margin-top: 0;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    #page-wrapper {
+        padding: 0 5px 0 5px;
+    }
+
+    .row {
+        margin-right: -15px;
+        margin-left: -16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sub-columns:nth-of-type(2n+1) {
+        padding-right: 5px;
+    }
+}
+
+@media (max-width: 992px) {
+    body {
+        //overflow: hidden;
+    }
+}
+
+@media (min-width: 992px) {
+
+    li.hide {
+        display: block !important;
+    }
+
+    .sub-columns:nth-of-type(2n+1) {
+        padding-right: 0;
+    }
+
+}

@@ -1,0 +1,1656 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Jennifer Lawrence</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="http://img.csfd.cz/assets/b1740/images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="./csfd_files/jquery-ui.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="./csfd_files/print.css" media="print">        
+        <link rel="stylesheet" href="./css/bootstrap.css">     
+        <link rel="stylesheet" href="./css/slide.css">    
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/header.css">
+        <link rel="stylesheet" href="./css/main-menu.css">
+        <link rel="stylesheet" href="./css/search-area.css">
+        <link rel="stylesheet" href="./css/user-menu.css">
+        <link rel="stylesheet" href="./css/box-area.css">
+        <link rel="stylesheet" href="./css/jenn.css">
+        <link rel="stylesheet" href="./css/tabs.css">
+    </head>
+    <body class="slide-push">        
+
+        <div id="page-wrapper" class="container-fluid">
+
+            <div id="page-header">
+                <div id="search-area" class="search-area slide slide-horizontal slide-top hidden-sm hidden-md hidden-lg">
+                    <form action="http://www.csfd.cz/hledat/" method="get" novalidate="">
+                        <div class="input-group">                            
+                            <input type="text" name="q" class="form-control" placeholder="Hledat">
+                            <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                        </div>
+                        <a class="advanced-search hidden-xs" href="http://www.csfd.cz/podrobne-vyhledavani/">podrobné vyhledávání →</a>
+                    </form>
+                </div>
+                <div class="row">
+                    <div id="header-menu-icon" class="col-xs-2 hidden-sm hidden-md hidden-lg">
+                        <button><span id="main-menu-trigger" class="glyphicon glyphicon-menu-hamburger"></span></button>                        
+                    </div>
+                    <div id="header-user-icon" class="col-xs-2 show hidden-sm hidden-md hidden-lg">
+                        <button id="user-menu-trigger"><span class="glyphicon glyphicon-user"></span></button>
+                        <button id="user-menu-logged-trigger" class="hide"><span class="glyphicon glyphicon-user"></span></button>
+                    </div>
+                    <div id="header-logo" class="col-xs-6 col-sm-5 show">
+                        <img src="./img/logo.png" id="logo" class="img-responsive center-block" alt="Logo">
+                    </div>
+                    <div id="header-search-icon" class="col-xs-2 show hidden-sm hidden-md hidden-lg">
+                        <button id="search-trigger"><span id="search-icon" class="glyphicon glyphicon-search"></span></button>
+                    </div>
+                    <div class="search-area hidden-xs col-sm-3">
+                        <form action="http://www.csfd.cz/hledat/" method="get" novalidate="">
+                            <div class="input-group">                            
+                                <input id="mainSearch" type="text" name="q" class="form-control" placeholder="Hledat">
+                                <button class="btn btn-default" type="submit"><span class="glyphicon glyphicon-search"></span></button>
+                                <button class="btn btn-default hidden-sm hidden-md hidden-lg" id="close" type="button"><span class="glyphicon glyphicon-remove"></span></button>
+                            </div>
+                            <a class="advanced-search hidden-xs" href="http://www.csfd.cz/podrobne-vyhledavani/">podrobné vyhledávání →</a>
+                        </form>
+                    </div>
+                    <div class="col-xs-6 col-sm-12 menu-col">
+                        <div id="user-area">
+                            <div id="user-menu" class="main-menu slide slide-vertical slide-left">
+                                <h4 class="hidden-xs">Uživatelská zóna</h4>
+                                <ul>
+                                    <li>
+                                        <a id="login">Přihlásit</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.csfd.cz/videa/" target="_blank">Registrovat</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.csfd.cz/televize/" target="_blank">Ztracené heslo</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="user-menu-logged" class="main-menu slide slide-vertical slide-left hide-menu">
+                                <img src="./img/user-photo.jpg" class="img-responsive user-photo hidden-xs" alt="User Photo">
+                                <ul>
+                                    <li>
+                                        <a href="./index.html">Hlavní strana</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Uživatel</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Pošta</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Oblíbení</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Chci vidět</a>
+                                    </li>                    
+                                    <li>
+                                        <a href="#" class="private">Soukromé</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Nastavení</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="private">Přítomní</a>
+                                    </li>
+                                    <li>
+                                        <a id="logout">Odhlásit</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row menu-row">
+
+                    <div class="col-xs-6 col-sm-12">
+                        <div id="main-menu" class="main-menu slide slide-vertical slide-left">
+                            <ul>
+                                <li class="hidden-sm hidden-md hidden-lg">
+                                    <a href="./index.html">Hlavní strana</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/novinky/" target="_blank">Novinky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/videa/" target="_blank">Videa</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/televize/" target="_blank">Televize</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/kino/" target="_blank">Kino</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/filmy-online/" target="_blank">Filmy online</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/dvd-a-bluray/" target="_blank">DVD & Blu-ray</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/tvurci/" target="_blank">Tvůrci</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/zebricky/" target="_blank">Žebříčky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/filmoteky/" target="_blank">Filmotéky</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/uzivatele/" target="_blank">Uživatelé</a>
+                                </li>
+                                <li>
+                                    <a href="http://www.csfd.cz/diskuze/" target="_blank">Diskuze</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-content">
+                <div class="row">
+                    <div class="col-sm-7 col-lg-6">
+                        <div class="row">
+
+                            <div class="col-xs-12 col-sm-5 col-sm-push-7 hidden-lg sub-columns side">
+
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-12">
+                                        <div class="favourite">
+                                            <a href="http://www.csfd.cz/tvurci/statistiky/?expand=fanclub#highlight-chart-fanclub-2-53547" target="_blank"> 27. nejoblíbenější herečka</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-4 col-sm-12">
+                                        <div class="fans">
+                                            <a href="http://www.csfd.cz/tvurce/53547-jennifer-lawrence/#" target="_blank" class="hidden-sm hidden-md hidden-lg">Fanoušci > </a>
+                                            <div class="hidden-xs header">
+                                                <span>Fanoušci tvůrce</span>
+                                            </div>
+                                            <div class="content hidden-xs">
+                                                <ul class="fans-list">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/uzivatel/69-kocour/oblibene-herecky/">kOCOUR</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/uzivatel/175524-dever/oblibene-herecky/">Dever</a>
+                                                    </li>
+                                                </ul>
+                                                <a href="http://www.csfd.cz/tvurce/53547-jennifer-lawrence/#" target="_blank">všichni fanoušci (4 778) </a>
+                                            </div>                                            
+                                            <div class="hidden-xs footer"></div>
+                                        </div>
+                                    </div>
+                                </div>                         
+                            </div>
+
+                            <div class="sub-columns col-xs-12 col-sm-7 col-sm-pull-5 col-lg-12 col-lg-pull-0">
+                                <div class="profile">
+                                    <div class="img">
+                                        <img src="./img/jenn.jpg" class="img-responsive" alt="Jennifer Lawrence">
+                                    </div>
+                                    <div class="info">
+                                        <h1>Jennifer Lawrence</h1>
+                                        <span>nar. 15. 8. 1990 </span><span class="age">(25 let)</span><br>
+                                        <span>Louisville, Kentucky, USA</span><br>                                    
+                                    </div>
+                                </div>                        
+                            </div>
+                            
+                            <div class="col-md-12 hidden-xs hidden-sm remove-side-padding remove-margin">
+                                <div class="links">
+                                    <ul class="social">
+                                        <li class="twitter">
+                                            <a href="http://twitter.com/intent/tweet?text=Jennifer%20Lawrence%20-%20http%3A%2F%2Fwww.csfd.cz%2Ftvurce%2F53547%2F" target="_blank" title="Sdílet na Twitteru" data-width="550" data-height="350"></a>
+                                        </li>
+                                        <li class="fb">
+                                            <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.csfd.cz%2Ftvurce%2F53547-jennifer-lawrence%2F" target="_blank" title="Sdílet na Fasebooku"></a>
+                                        </li>
+                                        <li>
+                                            <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.csfd.cz%2Ftvurce%2F53547-jennifer-lawrence%2F&amp;layout=button_count&amp;show_faces=false&amp;width=95&amp;action=like&amp;font=arial&amp;colorscheme=light&amp;height=21&amp;locale=cs_CZ"
+					scrolling="no" frameborder="0" height="21" width="95" allowTransparency="true"></iframe>
+                                        </li>
+                                    </ul>
+                                    <ul class="web-pages">
+                                        <li class="personal">
+                                            <a href="http://jenniferlawrence.org/" title="Jenniferlawrence.org" target="_blank"></a>
+                                        </li>
+                                        <li class="personal">
+                                            <a href="http://jennifer-lawrence.com/" title="Jennifer-lawrence.com" target="_blank"></a>
+                                        </li>
+                                        <li class="personal">
+                                            <a href="http://jenlawrence.cz/" title="Jenlawrence.cz" target="_blank"></a>
+                                        </li>
+                                        <li class="personal">
+                                            <a href="http://jlawcz.blog.cz/"  title="Jlawcz.blog.cz" target="_blank"></a>
+                                        </li>
+                                        <li class="imdb">
+                                            <a href="http://www.imdb.com/name/nm2225369/" title="Profil na IMDB.com"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="actions col-xs-12">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li class="active bio" role="presentation"><a href="#bio-tab" id="bio" role="tab" data-toggle="tab">biografie</a></li>
+                                    <li class="films hidden-sm hidden-md hidden-lg" role="presentation"><a href="#films-tab" id="films" role="tab" data-toggle="tab">filmografie</a></li>
+                                    <li class="dropdown hidden-sm hidden-md hidden-lg" id="drop" role="presentation">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">ostatní &nbsp;▼</a>                                        
+                                        <ul class="main-menu dropdown-menu" role="tablist">
+                                            <li class="trivia"><a href="#trivia-tab" role="tab" data-toggle="tab">zajímavosti</a></li>
+                                            <li class="awards"><a href="#awards-tab" role="tab" data-toggle="tab">ocenění</a></li>
+                                            <li class="videos"><a href="#videos-tab" role="tab" data-toggle="tab">videa</a></li>
+                                            <li class="gallery"><a href="#gallery-tab" role="tab" data-toggle="tab">galerie</a></li>
+                                            <li class="contact"><a href="#contact-tab" role="tab" data-toggle="tab">kontakt</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="trivia hidden-xs" role="presentation"><a href="#trivia-tab" id="trivia" role="tab" data-toggle="tab">zajímavosti</a></li>
+                                    <li class="awards hidden-xs" role="presentation"><a href="#awards-tab" id="awards" role="tab" data-toggle="tab">ocenění</a></li>
+                                    <li class="videos hidden-xs" role="presentation"><a href="#videos-tab" id="videos" role="tab" data-toggle="tab">videa</a></li>
+                                    <li class="gallery hidden-xs" role="presentation"><a href="#gallery-tab" id="gallery" role="tab" data-toggle="tab">galerie</a></li>
+                                    <li class="contact hidden-xs" role="presentation"><a href="#contact-tab" id="contact" role="tab" data-toggle="tab">kontakt</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active box" id="bio-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-10">
+                                                <span>Biografie</span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <p>Když se Vám podaří spojit cílevědomost, pracovitost a jedinečný talent, můžete si být jisti, že výsledkem bude něco mimořádného. Jennifer Shrader Lawrence věděla od začátku, kým chce být. Vyrůstala se dvěma staršími bratry v Kentucky, kde jako malá účinkovala v místním divadle, dokud se ve čtrnácti letech nerozhodla, že zkusí svoje štěstí v New Yorku.</p>
+                                            <p>Její první větší příležitost byla role v komediálním seriálu <i>The Bill Engwall Show</i>, který běžel v letech 2007 až 2009. Ve stejném období se objevila v dramatu <i>The Burning Plain</i> o dospívající dívce z mexického pohraničí. Za zmínku stojí také životopisný příběh umělkyně Lori Petty ve filmu <i>The Poker House</i>. Za svůj výkon si odnesla ocenění za nejlepší herecký výkon na festivalu v Los Angeles.</p>
+                                            <p class="continue">...</p>
+                                            <p class="hide">Cestu do záře reflektorů zpečetila její role dospívající dívky Ree v dramatu <i>Do morku kosti</i>. V konkurzu musela obstát v konkurenci více než 300 uchazeček. Snímek ji vynesl řadu ocenění, včetně nominace na Zlatý glóbus a Oscara. Ve věku 20 let se stala druhou nejmladší herečkou, která kdy byla nominována na nejprestižnější filmové ocenění. O rok později se objevila v černé komedii <i>The Beaver</i> a nezávislém filmu <i>Like Crazy</i>. Ve stejném roce se jí dostalo velké cti, když se stala členkou Akademie filmového umění a věd.</p>
+                                            <p class="hide">V roce 2011 ztvárnila postavu Mystique v komiksovém hitu <i>X-Men: First Class</i>. Premiéra druhého dílu je naplánována na červenec 2014, kdy do kin vtrhne pokračování s názvem <i>X-Men: Days of Future Past</i>. Navzdory slibně se rozvíjející kariéře si získala celosvětovou popularitu až svou rolí v post-apokalyptické sérii <i>Hunger Games</i>. Jennifer změnila svým ztvárněním Katniss Everdeen způsob, jakým byl doposud vnímán akční žánr. Vůbec poprvé byla postavena úspěšná akční série kolem hlavní ženské hrdinky. Média jí okamžitě přiřkla titul finančně nejúspěšnější hrdinka vůbec. Pokračování<i> Catching Fire</i> dorazí do kin letos v listopadu. Závěrečný díl <i>Mockingjay</i> rozdělený na dvě části pak v roce 2014, resp. 2015.</p>
+                                            <p class="hide">V loňském roce se objevila po boku Bradleyho Coopera v romantickém dramatu <i>Terapie Láskou</i>. Její postava Tiffany ji vynesla Zlatý Glóbus a Oscara. Ve 22 letech se stala druhou nejmladší držitelkou zlaté sošky v historii. Spolupráce s Bradleym jí očividně svědčí. Ještě letos se totiž objeví bok po boku ve snímku Serena a kriminálním drama <i>American Hustle</i>.</p>
+                                            <p class="hide">Jennifer má v současné době velmi nabitý kalendář. Ráda se pouští do filmových adaptací literárních děl. V blízké budoucnosti začne natáčet film na motivy biografie The Glass Castle od americké novinářky Jeannete Wallsové. Jejím dalším projektem by měl být snímek inspirovaný knihou The Rule of Inheritance, ve kterém si zahraje dospívající dívku, která v žalu ze ztráty obou svých rodičů, propadne životu plného drog a alkoholu.</p>
+                                            <p class="hide">V mládí se Jennifer aktivně věnovala celé řadě sportů, především basketbalu. Ve škole měla přezdívku Nitro a J-Law. Ráda hraje na kytaru a dokonce se objevila ve videoklipu „The Mess I Made" od skupiny Parachute. Pojí ji přátelství s Emmou Stone. Mezi její oblíbené herce patří James Franco, Jeff Bridges and Robert Downey Jr.</p>
+                                            <p class="author"><a href="http://www.csfd.cz/uzivatel/61506-fancipal/">Martin "Fancipal" Wróbel</a></p>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box filmography" id="films-tab">                                        
+                                        <div class="header row">
+                                            <div class="col-xs-10">Herecká filmografie</div>
+                                            <div class="col-xs-2"><span class="toggle-first">▼</span></div>
+                                        </div>
+                                        <div class="content row">
+                                            <ul class="years">
+                                                <li>2016
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/238069-east-of-eden/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                East of Eden</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/347139-passengers/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                Passengers</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/403035-the-dive/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                The Dive</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/358916-x-men-apokalypsa/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                X-Men: Apokalypsa</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>2015
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/321524-hunger-games-sila-vzdoru-2-cast/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Hunger Games: Síla vzdoru 2. část</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/391274-joy/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Joy</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>2014
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/315663-hunger-games-sila-vzdoru-1-cast/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Hunger Games: Síla vzdoru 1. část</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/311587-serena/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Serena</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/317342-x-men-budouci-minulost/" target="_blank">
+                                                                <span class="red"></span>
+                                                                X-Men: Budoucí minulost</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2013
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/262153-devil-you-know-the/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Devil You Know, The</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/314949-hunger-games-vrazedna-pomsta/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Hunger Games: Vražedná pomsta</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/335616-spinavy-trik/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Špinavý trik</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2012
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/280254-dum-na-konci-ulice/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Dům na konci ulice</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/291670-hunger-games/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Hunger games</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Terapie láskou</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2011
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/264784-pan-bobr/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Pan Bobr</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/251188-x-men-prvni-trida/" target="_blank">
+                                                                <span class="red"></span>
+                                                                X-Men: První třída</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/291375-zamilovani/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Zamilovaní</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2010
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/270749-do-morku-kosti/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Do morku kosti</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2008
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/234102-garden-party/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Garder party</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/263974-poker-house-the/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Poker House, The</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/234912-spalene-zivoty/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Spálené životy</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2007
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/252472-pearsonovi/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Pearsonovi</a>
+                                                            <span> (TV seriál)</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2006
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/240891-company-town/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                Company Town</a>
+                                                            <span> (TV seriál)</span>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/346523-smosh/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Smosh</a>
+                                                            <span> (TV seriál)</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2005
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/194878-medium/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Medium</a>
+                                                            <span> (TV seriál)</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2003
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/136239-odlozene-pripady/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Odložené případy</a>
+                                                            <span> (TV seriál)</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2002
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/71284-muj-pritel-monk/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Můj přítel Monk</a>
+                                                            <span> (TV seriál)</span>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                            <div class="filmography-section">
+                                                <div class="row separator">
+                                                    <div class="col-xs-12">
+                                                        <span>Dokumentární</span>
+                                                    </div>
+                                                </div>
+                                                <ul class="years">
+                                                    <li>2016
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/424370-a-beautiful-planet/" target="_blank">
+                                                                    <span class="grey"></span>
+                                                                    A Beautiful Planet</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>2011
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/323085-children-of-the-atom-filming-x-men-first-class/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Children of the Atom: Filming X-Men: First Class</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="filmography-section">
+                                                <div class="row separator">
+                                                    <div class="col-xs-10">
+                                                        <span>TV pořady</span>
+                                                    </div>
+                                                    <div class="col-xs-2">
+                                                        <span class="toggle-second">▼</span>
+                                                    </div>
+                                                </div>
+                                                <ul class="years">
+                                                    <li>2016
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/424143-oscar-2016/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Oscar 2016</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/417711-zlaty-globus-2016/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Zlatý Glóbus 2016</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>2015
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/399286-the-late-show-with-stephen-colbert/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    The Late Show with Stephen Colbert</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2014
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/358557-late-night-with-seth-meyers/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Late Night with Seth Meyers</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/367481-oscar-s-red-carpet-2014/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Oscar's Red Carpet 2014</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/363452-the-ee-bafta-film-awards-2014/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    The EE BAFTA Film Awards 2014</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/366058-tonight-show-starring-jimmy-fallon-the/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Tonight Show Starring Jimmy Fallon, The</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/360866-zlaty-globus-2014/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Zlatý Glóbus 2014</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/365172-20th-annual-screen-actors-guild-awards-the/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    20th Annual Screen Actors Guild Awards, The</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/360778-86-annual-academy-awards/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    86. Annual Academy Awards</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2013
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/331939-the-ee-bafta-film-awards-2013/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    The EE BAFTA Film Awards 2013</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/330506-zlaty-globus-2013/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Zlatý Glóbus 2013</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/365333-19th-annual-screen-actors-guild-awards/" target="_blank">
+                                                                    <span class="grey"></span>
+                                                                    19th Annual Screen Actors Guild Awards</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/340079-2013-film-independent-spirit-awards-the/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    2013 Film Independent Spirit Awards</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/339623-39th-annual-people-s-choice-awards-the/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    39th Annual People's Choice Awards, The</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/330165-85-annual-academy-awards/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    85. Annual Academy Awards</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2011
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/341294-big-morning-buzz-live/" target="_blank">
+                                                                    <span class="grey"></span>
+                                                                    Big Morning Buzz Live</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/301587-mtv-video-music-awards-2011/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    MTV Video Music Awards 2011</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/288424-zlaty-globus-2011/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Zlatý Glóbus 2011</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/290349-83-annual-academy-awards/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    83. Annual Academy Awards</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2010
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/287018-conan/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Conan</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2009
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/276508-moving-pictures-live/" target="_blank">
+                                                                    <span class="grey"></span>
+                                                                    Moving Pictures Live!</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/255162-nocni-show-jimmyho-fallona/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Noční Show Jimmyho Fallona</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2008
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/278747-mezi-dvema-kapradinami/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Mezi dvěma kapradinami</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2007
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/294425-chelsea-lately/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Chelsea Lately</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/331889-up-close-with-carrie-keagan/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Up Close with Carrie Keagan</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2005
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/243182-colbert-report-the/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Colbert Report, The</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/206914-made-in-hollywood/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Made in Hollywood</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2004
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/190061-x-factor-the/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    X Factor, The</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">2003
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/118656-jimmy-kimmel-live/" target="_blank">                                                            
+                                                                    <span class="red"></span>
+                                                                    Jimmy Kimmel Live!</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/228962-show-ellen-degeneresove/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Show Ellen DeGeneresové</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1996
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/98326-access-hollywood/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Access Hollywood</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1994
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/98047-extra/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Extra</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1993
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/150118-nocni-show-davida-lettermana/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Noční show Davida Lettermana</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1992
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/157303-nocni-show-jaye-lenoe/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Noční Show Jaye Lenoe</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1991
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/321297-dias-de-cine/" target="_blank">
+                                                                    <span class="grey"></span>
+                                                                    Días de cine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1988
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/301079-live-with-regis-and-kathie-lee/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Live with Regis and Kathie Lee</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1984
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/390931-cinema-3/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Cinema 3</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1981
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/98209-entertainment-tonight/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Entertainment Tonight</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="hide">1975
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/231929-good-morning-america/" target="_blank">
+                                                                    <span class="blue"></span>
+                                                                    Good Morning America</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/231480-saturday-night-live/" target="_blank">
+                                                                    <span class="red"></span>
+                                                                    Saturday Night Live</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="filmography-section">
+                                                <div class="row separator">
+                                                    <div class="col-xs-12">
+                                                        <span>Hudební videoklipy</span>
+                                                    </div>
+                                                </div>
+                                                <ul class="years">
+                                                    <li>2009
+                                                        <ul class="movies">
+                                                            <li>
+                                                                <a href="http://www.csfd.cz/film/348278-parachute-the-mess-i-made/" target="_blank">
+                                                                    <span class="grey"></span>
+                                                                    Parachute - The Mess I Made</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="trivia-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Zajímavosti</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <ul class="trivia-list">
+                                                <li>Má anglické, německé, irské, skotské a francouzské předky. (<a href="http://www.csfd.cz/uzivatel/412096-jordy/" target="_blank">JORDY</a>)</li>
+                                                <li>Je levačka. (<a href="http://www.csfd.cz/uzivatel/412096-jordy/" target="_blank">JORDY</a>)</li>
+                                                <li>Umí hrát na kytaru. (<a href="http://www.csfd.cz/uzivatel/412096-jordy/" target="_blank">JORDY</a>)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="awards-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Ocenění</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <ul class="legend">
+                                                <li class="win">vítězství</li>
+                                                <li class="nom">nominace</li>
+                                            </ul>
+
+                                            <h3>Oscary</h3>
+                                            <ul class="awards-list">
+                                                <li class="nom">2016 - <a href="http://www.csfd.cz/film/391274-joy/" target="_blank">Joy</a> (Hlavní herečka)</li>
+                                                <li class="nom">2014 - <a href="http://www.csfd.cz/film/335616-spinavy-trik/" target="_blank">Špinavý trik</a> (Vedlejší herečka)</li>
+                                                <li class="win">2013 - <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">Terapie láskou</a> (Hlavní herečka)</li>
+                                                <li class="nom">2011 - <a href="http://www.csfd.cz/film/270749-do-morku-kosti/" target="_blank">Do morku kosti</a> (Hlavní herečka)</li>
+                                            </ul>
+
+                                            <h3>Zlaté Glóby</h3>
+                                            <ul class="awards-list">
+                                                <li class="win">2016 - <a href="http://www.csfd.cz/film/391274-joy/" target="_blank">Joy</a> (Nejlepší herečka - komedie nebo muzikál)</li>
+                                                <li class="win">2014 - <a href="http://www.csfd.cz/film/335616-spinavy-trik/" target="_blank">Špinavý trik</a> (Nejlepší herečka ve vedlejší roli)</li>
+                                                <li class="win">2013 - <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">Terapie láskou</a> (Nejlepší herečka - komedie nebo muzikál)</li>
+                                                <li class="nom">2011 - <a href="http://www.csfd.cz/film/270749-do-morku-kosti/" target="_blank">Do morku kosti</a> (Nejlepší herečka - drama)</li>
+                                            </ul>
+
+                                            <h3>BAFTA</h3>
+                                            <ul class="awards-list">
+                                                <li class="win">2014 - <a href="http://www.csfd.cz/film/335616-spinavy-trik/" target="_blank">Špinavý trik</a> (Nejlepší herečka ve vedlejší roli)</li>
+                                                <li class="nom">2013 - <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">Terapie láskou</a> (Nejlepší herečka - komedie nebo muzikál)</li>
+                                            </ul>
+
+                                            <h3>New York Film Critics Circle</h3>
+                                            <ul class="awards-list">
+                                                <li class="win">2013 - <a href="http://www.csfd.cz/film/335616-spinavy-trik/" target="_blank">Špinavý trik</a> (Nejlepší herečka ve vedlejší roli)</li>
+                                                <li class="nom">2012 - <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">Terapie láskou</a> (Nejlepší herečka - komedie nebo muzikál)</li>
+                                            </ul>
+
+                                            <h3>Los Angeles Film Critics Association</h3>
+                                            <ul class="awards-list">
+                                                <li class="win">2012 - <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">Terapie láskou</a> (Nejlepší herečka - komedie nebo muzikál)</li>
+                                                <li class="nom">2010 - <a href="http://www.csfd.cz/film/270749-do-morku-kosti/" target="_blank">Do morku kosti</a> (Nejlepší herečka - drama)</li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="videos-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-10">
+                                                <span>Videa</span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span class="toggle-videos">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+
+                                            <div class="video-area">
+                                                <div class="video-header"><a href="http://www.csfd.cz/film/366058-tonight-show-starring-jimmy-fallon-the/" target="_blank">The Tonight Show Starring Jimmy Fallon</a> (2014)</div>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <video class="embed-responsive-item" controls poster="./img/jenn01.jpg">
+                                                        <source src="./videos/jenn01.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>  
+                                                <div class="video-footer"><a href="./jennifer-lawrence.html">Jennifer Lawrence</a> Shares Her Most Embarrassing Moments</div>
+                                            </div>
+
+                                            <div class="video-area hide">
+                                                <div class="video-header"><a href="http://www.csfd.cz/film/399286-the-late-show-with-stephen-colbert/" target="_blank">The Late Show with Stephen Colbert</a> (2014)</div>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <video class="embed-responsive-item" controls poster="./img/jenn03.jpg">
+                                                        <source src="./videos/jenn03.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>  
+                                                <div class="video-footer"><a href="./jennifer-lawrence.html">Jennifer Lawrence</a> Enjoys Being A Human Being</div>
+                                            </div>
+
+                                            <div class="video-area hide">
+                                                <div class="video-header">Oscar (2013)</div>
+                                                <div class="embed-responsive embed-responsive-16by9">
+                                                    <video class="embed-responsive-item" controls poster="./img/jenn02.jpg">
+                                                        <source src="./videos/jenn02.mp4" type="video/mp4">
+                                                        Your browser does not support the video tag.
+                                                    </video>
+                                                </div>  
+                                                <div class="video-footer"><a href="./jennifer-lawrence.html">Jennifer Lawrence</a> Wins Best Actress: 2013 Oscars</div>
+                                            </div>
+
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="gallery-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-10">
+                                                <span>Galerie</span>
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <span class="toggle">▼</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div>
+                                                <div class="video-content">
+                                                    <img src="img/gallery1.jpg" class="img-responsive" alt="1">
+                                                </div>
+                                                <div class="video-footer">
+                                                    <span><a href="./jennifer-lawrence.html">Jennifer Lawrence</a>,
+                                                        <a href="http://www.csfd.cz/tvurce/98-robert-de-niro/" target="_blank"> Robert De Niro</a>,
+                                                         <a href="http://www.csfd.cz/tvurce/25983-edgar-ramirez/" target="_blank"> Édgar Ramírez</a>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="hide">
+                                                <div class="video-content">
+                                                    <img src="img/gallery2.jpg" class="img-responsive" alt="1">
+                                                </div>
+                                                <div class="video-footer">
+                                                    <span><a href="./jennifer-lawrence.html">Jennifer Lawrence</a></span>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="hide">
+                                                <div class="video-content">
+                                                    <img src="img/gallery3.jpg" class="img-responsive" alt="1">
+                                                </div>
+                                                <div class="video-footer">
+                                                    <span><a href="./jennifer-lawrence.html">Jennifer Lawrence</a>,
+                                                        <a href="http://www.csfd.cz/tvurce/98-robert-de-niro/" target="_blank"> Robert De Niro</a>,
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane box" id="contact-tab">
+                                        <div class="header row">
+                                            <div class="col-xs-12">
+                                                <span>Kontakt</span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <span>Jennifer Lawrence</span><br>
+                                            <span>P.O.Box 6509</span><br>
+                                            <span>Louisville, Kentucky 40206</span><br>
+                                            <span>USA</span><br>
+                                        </div>
+                                        <div class="footer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-5 col-lg-4 hidden-xs">
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="box filmography">
+                                    <div class="header row">
+                                        <div class="col-sm-10"><h1>Herecká filmografie</h1></div>
+                                        <div class="col-sm-2"><span class="toggle-first">▼</span></div>
+                                    </div>
+                                    <div class="content row">
+                                        <ul class="years">
+                                            <li>2016
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/238069-east-of-eden/" target="_blank">
+                                                            <span class="grey"></span>
+                                                            East of Eden</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/347139-passengers/" target="_blank">
+                                                            <span class="grey"></span>
+                                                            Passengers</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/403035-the-dive/" target="_blank">
+                                                            <span class="grey"></span>
+                                                            The Dive</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/358916-x-men-apokalypsa/" target="_blank">
+                                                            <span class="grey"></span>
+                                                            X-Men: Apokalypsa</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>2015
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/321524-hunger-games-sila-vzdoru-2-cast/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Hunger Games: Síla vzdoru 2. část</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/391274-joy/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Joy</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>2014
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/315663-hunger-games-sila-vzdoru-1-cast/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Hunger Games: Síla vzdoru 1. část</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/311587-serena/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Serena</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/317342-x-men-budouci-minulost/" target="_blank">
+                                                            <span class="red"></span>
+                                                            X-Men: Budoucí minulost</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2013
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/262153-devil-you-know-the/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Devil You Know, The</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/314949-hunger-games-vrazedna-pomsta/" target="_blank">
+                                                            <span class="red"></span>
+                                                            Hunger Games: Vražedná pomsta</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/335616-spinavy-trik/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Špinavý trik</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2012
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/280254-dum-na-konci-ulice/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Dům na konci ulice</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/291670-hunger-games/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Hunger games</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/289999-terapie-laskou/" target="_blank">
+                                                            <span class="red"></span>
+                                                            Terapie láskou</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2011
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/264784-pan-bobr/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Pan Bobr</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/251188-x-men-prvni-trida/" target="_blank">
+                                                            <span class="red"></span>
+                                                            X-Men: První třída</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/291375-zamilovani/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Zamilovaní</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2010
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/270749-do-morku-kosti/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Do morku kosti</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2008
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/234102-garden-party/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Garder party</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/263974-poker-house-the/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Poker House, The</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/234912-spalene-zivoty/" target="_blank">
+                                                            <span class="red"></span>
+                                                            Spálené životy</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2007
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/252472-pearsonovi/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Pearsonovi</a>
+                                                        <span> (TV seriál)</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2006
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/240891-company-town/" target="_blank">
+                                                            <span class="grey"></span>
+                                                            Company Town</a>
+                                                        <span> (TV seriál)</span>
+                                                    </li>
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/346523-smosh/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Smosh</a>
+                                                        <span> (TV seriál)</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2005
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/194878-medium/" target="_blank">
+                                                            <span class="blue"></span>
+                                                            Medium</a>
+                                                        <span> (TV seriál)</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2003
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/136239-odlozene-pripady/" target="_blank">
+                                                            <span class="red"></span>
+                                                            Odložené případy</a>
+                                                        <span> (TV seriál)</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="hide">2002
+                                                <ul class="movies">
+                                                    <li>
+                                                        <a href="http://www.csfd.cz/film/71284-muj-pritel-monk/" target="_blank">
+                                                            <span class="red"></span>
+                                                            Můj přítel Monk</a>
+                                                        <span> (TV seriál)</span>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                        <div class="filmography-section">
+                                            <div class="row separator">
+                                                <div class="col-sm-12">
+                                                    <span>Dokumentární</span>
+                                                </div>
+                                            </div>
+                                            <ul class="years">
+                                                <li>2016
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/424370-a-beautiful-planet/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                A Beautiful Planet</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>2011
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/323085-children-of-the-atom-filming-x-men-first-class/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Children of the Atom: Filming X-Men: First Class</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="filmography-section">
+                                            <div class="row separator">
+                                                <div class="col-sm-10">
+                                                    <span>TV pořady</span>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <span class="toggle-second">▼</span>
+                                                </div>
+                                            </div>
+                                            <ul class="years">
+                                                <li>2016
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/424143-oscar-2016/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Oscar 2016</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/417711-zlaty-globus-2016/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Zlatý Glóbus 2016</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>2015
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/399286-the-late-show-with-stephen-colbert/" target="_blank">
+                                                                <span class="red"></span>
+                                                                The Late Show with Stephen Colbert</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2014
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/358557-late-night-with-seth-meyers/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Late Night with Seth Meyers</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/367481-oscar-s-red-carpet-2014/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Oscar's Red Carpet 2014</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/363452-the-ee-bafta-film-awards-2014/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                The EE BAFTA Film Awards 2014</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/366058-tonight-show-starring-jimmy-fallon-the/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Tonight Show Starring Jimmy Fallon, The</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/360866-zlaty-globus-2014/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Zlatý Glóbus 2014</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/365172-20th-annual-screen-actors-guild-awards-the/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                20th Annual Screen Actors Guild Awards, The</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/360778-86-annual-academy-awards/" target="_blank">
+                                                                <span class="red"></span>
+                                                                86. Annual Academy Awards</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2013
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/331939-the-ee-bafta-film-awards-2013/" target="_blank">
+                                                                <span class="red"></span>
+                                                                The EE BAFTA Film Awards 2013</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/330506-zlaty-globus-2013/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Zlatý Glóbus 2013</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/365333-19th-annual-screen-actors-guild-awards/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                19th Annual Screen Actors Guild Awards</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/340079-2013-film-independent-spirit-awards-the/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                2013 Film Independent Spirit Awards</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/339623-39th-annual-people-s-choice-awards-the/" target="_blank">
+                                                                <span class="red"></span>
+                                                                39th Annual People's Choice Awards, The</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/330165-85-annual-academy-awards/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                85. Annual Academy Awards</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2011
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/341294-big-morning-buzz-live/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                Big Morning Buzz Live</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/301587-mtv-video-music-awards-2011/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                MTV Video Music Awards 2011</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/288424-zlaty-globus-2011/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Zlatý Glóbus 2011</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/290349-83-annual-academy-awards/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                83. Annual Academy Awards</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2010
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/287018-conan/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Conan</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2009
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/276508-moving-pictures-live/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                Moving Pictures Live!</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/255162-nocni-show-jimmyho-fallona/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Noční Show Jimmyho Fallona</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2008
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/278747-mezi-dvema-kapradinami/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Mezi dvěma kapradinami</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2007
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/294425-chelsea-lately/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Chelsea Lately</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/331889-up-close-with-carrie-keagan/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Up Close with Carrie Keagan</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2005
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/243182-colbert-report-the/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Colbert Report, The</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/206914-made-in-hollywood/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Made in Hollywood</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2004
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/190061-x-factor-the/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                X Factor, The</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">2003
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/118656-jimmy-kimmel-live/" target="_blank">                                                            
+                                                                <span class="red"></span>
+                                                                Jimmy Kimmel Live!</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/228962-show-ellen-degeneresove/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Show Ellen DeGeneresové</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1996
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/98326-access-hollywood/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Access Hollywood</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1994
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/98047-extra/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Extra</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1993
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/150118-nocni-show-davida-lettermana/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Noční show Davida Lettermana</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1992
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/157303-nocni-show-jaye-lenoe/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Noční Show Jaye Lenoe</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1991
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/321297-dias-de-cine/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                Días de cine</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1988
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/301079-live-with-regis-and-kathie-lee/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Live with Regis and Kathie Lee</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1984
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/390931-cinema-3/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Cinema 3</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1981
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/98209-entertainment-tonight/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Entertainment Tonight</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="hide">1975
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/231929-good-morning-america/" target="_blank">
+                                                                <span class="blue"></span>
+                                                                Good Morning America</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/231480-saturday-night-live/" target="_blank">
+                                                                <span class="red"></span>
+                                                                Saturday Night Live</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="filmography-section">
+                                            <div class="row separator">
+                                                <div class="col-sm-12">
+                                                    <span>Hudební videoklipy</span>
+                                                </div>
+                                            </div>
+                                            <ul class="years">
+                                                <li>2009
+                                                    <ul class="movies">
+                                                        <li>
+                                                            <a href="http://www.csfd.cz/film/348278-parachute-the-mess-i-made/" target="_blank">
+                                                                <span class="grey"></span>
+                                                                Parachute - The Mess I Made</a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="footer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                        
+
+                    <div class="hidden-xs hidden-sm hidden-md col-lg-2 sub-columns side">
+                        <div class="row">
+                            <div class="col-xs-8 col-sm-12">
+                                <div class="favourite">
+                                    <a href="http://www.csfd.cz/tvurci/statistiky/?expand=fanclub#highlight-chart-fanclub-2-53547" target="_blank"> 27. nejoblíbenější herečka</a>
+                                </div>
+                            </div>
+                            <div class="col-xs-4 col-sm-12">
+                                <div class="fans">
+                                    <a href="http://www.csfd.cz/tvurce/53547-jennifer-lawrence/#" target="_blank" class="hidden-sm hidden-md hidden-lg">Fanoušci > </a>
+                                    <div class="hidden-xs header">
+                                        <span>Fanoušci tvůrce</span>
+                                    </div>
+                                    <div class="content hidden-xs">
+                                        <ul class="fans-list">
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/69-kocour/oblibene-herecky/">kOCOUR</a>
+                                            </li>
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/175524-dever/oblibene-herecky/">Dever</a>
+                                            </li>                                            
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/164556-mish-k-a/oblibene-herecky/">Mish.k.a</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/328256-emma53/oblibene-herecky/">emma53</a>
+                                            </li>                                         
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/44793-m-a-t-t/oblibene-herecky/">M.a.t.t.</a>
+                                            </li>                                        
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/154594-traffic/oblibene-herecky/">Traffic</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/7906-jan/oblibene-herecky/">JAn</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/127196-botic/oblibene-herecky/">Botič</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/51851-pavka5/oblibene-herecky/">Pavka5</a>
+                                            </li>                                           
+                                            <li>
+                                                <a href="http://www.csfd.cz/uzivatel/146860-missha/oblibene-herecky/">MISSha</a>
+                                            </li>   
+                                        </ul>
+                                        <a href="http://www.csfd.cz/tvurce/53547-jennifer-lawrence/#" target="_blank">všichni fanoušci (4 778) </a>
+                                    </div>                                            
+                                    <div class="hidden-xs footer"></div>
+                                </div>
+                            </div>
+                        </div>                         
+                    </div>
+                </div>
+            </div>
+
+            <div id="page-footer">
+                <div class="row footer-menu">
+                    <div class="col-xs-12 centered">
+                        <a href="http://www.csfd.cz/provozovatel-a-redakce/" target="_blank">Provozovatel a redakce</a>
+                        <span class="hidden-xs">| <a href="http://www.csfd.cz/reklama-a-marketing/">Reklama a marketing</a></span>
+                    </div>
+                    <div class="col-xs-12 centered">
+                        <a href="http://www.csfd.cz/navod-k-pouziti/" target="_blank">FAQ</a>
+                        <span>|</span>
+                        <span class="hidden-xs hide"><a  target="_blank" href="http://www.csfd.cz/navod-k-pouziti/">Návod k použití</a> |</span>
+                        <span class="hidden-xs"><a  target="_blank" href="http://www.csfd.cz/postradam-zde/">Postrádám zde</a> |</span>
+                        <a href="http://www.csfd.cz/kontakt/" target="_blank">Napište nám</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script type="text/javascript" charset="utf-8" src="./js/jquery-2.2.0.min.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="./js/bootstrap.min.js"></script> 
+    <script type="text/javascript" charset="utf-8" src="./js/main.js"></script> 
+    <script src="./js/classie.js"></script>
+</body>
+</html>

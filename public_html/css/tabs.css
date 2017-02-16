@@ -1,0 +1,344 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27.3.2016, 14:52:17
+    Author     : Mish.k.a
+*/
+
+.btn-default:active:hover,
+.btn-default.active:hover,
+.open > .dropdown-toggle.btn-default:hover,
+.btn-default:active:focus,
+.btn-default.active:focus,
+.open > .dropdown-toggle.btn-default:focus,
+.btn-default:active.focus,
+.btn-default.active.focus,
+.open > .dropdown-toggle.btn-default.focus {
+    color: #B01;
+}
+
+.dropdown-menu.main-menu {
+    right: 0px;
+    left: auto;
+    top: 49px;
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.dropdown-menu.main-menu a {
+    color: #B01;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.nav-tabs a:focus {
+    outline: none;
+}
+
+.nav-tabs > li > a {
+    background-image: url('../img/icons.png');
+    display: block;
+    width: 61px;
+    height: 65px;
+    padding: 0;
+    text-align: center;
+    font-size: 11px;    
+    font-weight: normal;
+}
+
+.nav-tabs > li.dropdown {
+    margin-top: 28px;
+    background-color: #B01;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    font-size: 1.1em;
+    padding: 10px;
+}
+
+.nav-tabs > li > a:hover {
+    text-decoration: underline;
+}
+
+.nav-tabs > li.dropdown > a:hover, .nav-tabs > li.dropdown > a:focus {
+    background: none;
+    text-decoration: none;
+}
+
+.nav-tabs > li.dropdown > a, .nav-tabs > li.dropdown.active > a {
+    background-image: none;
+    width: auto;
+    height: auto;
+    color: white;
+}
+
+.nav-tabs .dropdown-menu li a {
+    color: #B01 !important;
+}
+
+.nav-tabs .dropdown-menu li.active a {
+    color: black !important;
+}
+
+.nav-tabs .dropdown-menu li.active a, .nav-tabs .dropdown-menu li a:hover {
+    background: none;
+}
+
+.nav-tabs li.bio a {
+    background-position: -506px 75px;
+}
+
+.nav-tabs li.bio.active a {
+    background-position: -506px 8px;
+}
+
+.nav-tabs li.films a {
+    background-position: -883px 75px;
+}
+
+.nav-tabs li.films.active a {
+    background-position: -883px 8px;
+}
+
+.nav-tabs li.trivia a {
+    background-position: -380px 75px;
+}
+
+.nav-tabs li.trivia.active a {
+    background-position: -380px 8px;
+}
+
+.nav-tabs li.awards a {
+    background-position: -631px 75px;
+}
+
+.nav-tabs li.awards.active a {
+    background-position: -631px 8px;
+}
+
+.nav-tabs li.makers a {
+    background-position: -694px 75px;
+}
+
+.nav-tabs li.makers.active a {
+    background-position: -694px 8px;
+}
+
+.nav-tabs li.videos a {
+    background-position: -253px 75px;
+}
+
+.nav-tabs li.videos.active a {
+    background-position: -253px 8px;
+}
+
+.nav-tabs li.gallery a {
+    background-position: -317px 75px;
+}
+
+.nav-tabs li.gallery.active a {
+    background-position: -317px 8px;
+}
+
+.nav-tabs li.comments a {
+    background-position: -66px 75px;
+}
+
+.nav-tabs li.comments.active a {
+    background-position: -66px 8px;
+}
+
+.nav-tabs li.contact a {
+    background-position: -568px 75px;
+}
+
+.nav-tabs li.contact.active a {
+    background-position: -568px 8px;
+}
+
+.nav-tabs li.obsah a {
+    background-position: -568px 75px;
+}
+
+.nav-tabs li.obsah.active a {
+    background-position: -568px 8px;
+}
+
+.nav-tabs li.review a {
+    background-position: -444px 75px;
+}
+
+.nav-tabs li.review.active a {
+    background-position: -444px 8px;
+}
+
+.nav-tabs li.active a {
+    color: black;
+}
+
+.main-menu.dropdown-menu {
+    padding: 0;
+}
+
+.box .content {
+    padding: 10px 10px 10px 10px;
+}
+
+p {
+    font-weight: normal;
+    text-align: justify;
+    display: block;
+    text-indent: 0px !important;
+    padding-top: 10px;
+    margin-bottom: 0px;
+}
+
+#videos-tab a {
+    font-weight: bold;
+}
+
+.video-header {
+    background-color: #DDD;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    padding: 5px 10px;
+}
+
+.video-footer {
+    background-color: #DDD;
+    border-bottom-left-radius: 13px;
+    border-bottom-right-radius: 13px;
+    padding: 5px;
+    text-align: center;
+}
+
+.video-area {
+    margin-top: 15px;    
+}
+
+.video-area:first-of-type {
+    margin-top: 0px;
+}
+
+#trivia-tab .content {
+    padding: 0 !important;    
+}
+
+#trivia-tab a {
+    font-style: italic;
+}
+
+.trivia-list {
+    font-weight: normal;
+    list-style-position: inside;
+    width: 100%;
+    padding-left: 0 !important;
+}
+
+.trivia-list li {
+    padding: 10px 14px;
+    border-bottom: 1px solid #DDD;
+}
+
+#gallery-tab .content > div {
+    margin-top: 15px;
+}
+
+#gallery-tab .content > div:nth-of-type(1) {
+    margin-top: 0px;
+}
+
+#gallery-tab .video-footer {
+    font-weight: normal;
+    background-color: transparent;
+}
+
+#gallery-tab .content > div:last-of-type .video-footer {
+    margin-bottom: 0px;
+}
+
+#contact-tab .content, #awards-tab .content, .filmography .content, #videos-tab .content,
+#gallery-tab .content, #makers-tab .content, #obsah-tab .content {
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#comments-tab .content, #review-tab .content {
+    padding: 0;
+}
+
+.links .web-pages {
+    float: right;
+}
+
+.links .web-pages li a {
+    display: block;
+    width: 40px;
+    height: 18px;
+}
+
+.links .web-pages li.personal a {
+    background: url('../img/link-icon.png') 0 18px;
+}
+
+.links .web-pages li.imdb a {
+    background: url('../img/link-icon.png') 0 0;
+}
+
+.links {
+    background-color: #DDD;
+    height: 26px;
+}
+
+.links ul {
+    display: inline-block;
+    padding: 3px 3px 3px 3px !important;
+}
+
+.links ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+.links .social {
+    float: left;
+    padding: 0;
+}
+
+.links .social li a {
+    display: block;
+    height: 20px;
+}
+
+.links .social li.twitter a {
+    background: url('../img/twitter.png') 0 0;
+    width: 20px;
+}
+
+.links .social li.fb a {
+    background: url('../img/fb.png') 0 0;
+    width: 20px;
+}
+
+@media (max-width: 767px) {
+    
+    .actions .box {
+        border-top-right-radius: 0;
+    }
+    
+    .nav-tabs > #drop {
+        float: right;
+    }
+    
+    .nav-tabs { 
+        margin-bottom: -2px;
+    }
+    
+    .nav-tabs > li > a {
+        font-size: 12px;    
+    }
+}

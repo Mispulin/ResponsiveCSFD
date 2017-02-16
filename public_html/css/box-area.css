@@ -1,0 +1,439 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.3.2016, 9:39:19
+    Author     : krizomic
+*/
+
+.actors {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+/*    list-style-type: initial !important;
+    list-style-position: inside;*/
+}
+
+.alza-play {
+    margin-top: 6px;
+}
+
+.blue {
+    background-color: #7585AC;
+}
+
+.box {
+    margin: auto auto 10px auto;
+    border: 10px solid #B01;
+    border-radius: 10px;
+    border-width: 10px 0 0 0;
+    max-width: 420px;
+}
+
+.box .col-xs-1 {
+    padding: 0;
+}
+
+.box .content, .fans .content {
+    background-color: rgba(238,238,238,1);
+    padding-left: 15px;
+}
+
+.box.radio .content {
+    padding-left: 0px;
+}
+
+.box .content.comment {
+    padding-left: 5px;
+}
+
+.box .header, .box .footer,
+.fans .header, .fans .footer {
+    background-color: #DDDDDD;
+}
+
+.box .header, .fans .header {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.box .footer, .fans .footer {
+    height: 10px;    
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.box p {
+    text-indent: -20px;
+}
+
+.box .row {
+    margin: 0;
+}
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    margin:auto;
+}
+
+.carousel-caption {
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-top: 0;
+} 
+
+.carousel-caption h1 {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    text-shadow: none;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    margin-top: 0;
+}
+
+.carousel-control {
+    height: 80%;
+    margin-top: 3%;
+}
+
+.carousel-play {
+    height: 0;
+}
+
+#myCarousel {
+    overflow: hidden;
+}
+
+#myCarousel .carousel-inner a {
+    height: 80%;
+}
+
+.glyphicon-play-circle {
+    color: rgba(255, 255, 255, 0.61);
+    width: 550px;
+    height: 316px;
+    font-size: 10vw;
+    position: relative;
+    top: -339px;
+    padding-top: 86px;
+    padding-bottom: 113px;
+    left: 137px;
+}
+
+.comment {
+    font-weight: normal;
+}
+
+.comment div:nth-child(1n) {
+    margin-bottom: 5px;
+}
+
+.comment div:nth-child(1) {
+    margin-top: 5px;
+}
+
+.content a {
+    font-weight: normal;
+}
+
+.cinema {
+    border-bottom: 1px solid #B01;
+}
+
+.cinestar {
+    float: right;
+    margin-top: 5.5%;
+    margin-right: 2%;
+}
+
+.content ul {
+    padding-left: 10px;
+}
+
+.content ul.films {
+    padding-left: 0px;
+}
+
+.csfd-cinema {
+    background-color: #BB0011;
+    border-radius: 15px;
+    padding-bottom: 2px;
+    margin: auto auto 10px auto;
+}
+
+.csfd-cinema .cinema {
+    padding: 2px;
+}
+
+.csfd-cinema .cinema a, .csfd-cinema .films a {
+    font-weight: bold;
+}
+
+.csfd-cinema .content {
+    text-align: center;
+    margin: 10px;
+    background-color: #EEEEEE;
+    border-radius: 15px;
+}
+
+.csfd-label {
+    display: block;
+}
+
+.csfd-label, .csfd-number {
+    font-weight: normal;
+}
+
+.csfd-number {
+    display: block;
+    text-align: right;
+    top: -18px;
+    position: relative;
+    margin-bottom: -15px;
+}
+
+.date {    
+    color: #CCCCCC;
+    margin-right: 5px;
+    font-weight: lighter;
+    float: right;
+}
+
+.films {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.film {
+    height: 56px;
+    padding: 0 10px;
+    border-bottom: 1px solid #B01;
+}
+
+.film .info {
+    padding-left: 44px;
+    padding-right: 0px;
+    text-align: left;
+    font-weight: normal;
+    color: #9E9C9C;
+}
+
+.film:nth-of-type(2n) .info {
+    padding-right: 44px;
+    padding-left: 0px;
+    text-align: right;
+}
+
+.film img {
+    float: left;
+    max-height: 55px;
+}
+
+.film:nth-child(2n) img {
+    float: right;
+}
+
+.grey {
+    background-color:  #CCCCCC;
+}
+
+.heading-video {
+    z-index: 999;
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.27);
+    width: 100%;
+    padding: 6px 6px;
+    margin-top: 0;
+}
+
+.hot-tips {
+    padding: 10px;
+}
+
+.item {
+    cursor: pointer;
+}
+
+.list-menu {
+    padding: 0;
+}
+
+.content ul.fans-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.melody {
+    position:relative;
+    display:block;
+    background-image:url('../img/radio.png');
+    height:98px;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding:0;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.melody-info {
+    position: relative;
+    top: 49px;
+    left: 25%;
+}
+
+.movie-info {
+    margin-bottom: 10px;  
+    text-align: justify;  
+    font-weight: normal;
+    font-size: 1em;
+    font-family: Arial,sans-serif;
+    line-height: 1.3em;
+}
+
+#my-carousel {
+    margin: 0 auto;
+    padding: 5px;
+}
+
+.news .content {
+    padding: 10px 0;
+}
+
+.news-image {
+   padding-right: 5px !important;
+   max-width: 80px;
+   float: left;
+}
+
+.player {
+    position:absolute;
+    top:0;
+    left:0;
+    display:block;
+    width:159px;
+    height:45px;
+}
+
+.soutez {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.special {
+    margin: 3px auto 15px auto;
+}
+
+.red {
+    background-color: #BB0011;
+}
+
+.toggle, .toggle-first, .toggle-second, .toggle-videos {
+    color: #BB0011; 
+    cursor: pointer;
+}
+
+.toggle:hover, .toggle-first:hover, .toggle-second:hover, .toggle-videos:hover {
+    text-decoration: none;
+}
+
+.tv-info {
+    font-weight: normal;
+    margin-left: 15px;
+    margin-bottom: 3px;
+    color: #443838;
+}
+
+.widgets {
+    margin-left: -11px;
+    margin-right: -19px;
+}
+
+.widget-list {
+    list-style-type: none;
+    padding: 10px 10px 10px 0;
+    margin-bottom: 0;
+}
+
+.blue, .grey, .red {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 5px;
+    top: 1px;
+    position: relative;
+    margin-left: 0px;
+}
+
+.tv-tips .blue, .tv-tips .red, .tv-tips .grey {
+    margin-right: 2px;    
+}
+
+.widget-list li span {
+    margin-left: 0px;
+    font-weight: normal;
+}
+
+.widget-list .row div {
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    
+    .actors li.hide {
+        display: block !important;        
+    }
+
+    .box {
+        max-width: 100%;
+    }
+    
+    .tv-info {
+        margin-left: 0;
+        text-align: right;
+        margin-right: 5px;
+        top: -9px; 
+    }
+    
+    .tv-info.first {
+        text-align: left;
+        line-height: 2em;
+        padding-left: 95px !important;
+    }
+    
+    .tv-tips li, .new-videos li {
+        line-height: 0.6em;
+    }
+    
+}
+
+@media (min-width: 992px) {
+
+    .others li.hide {
+        display: none !important;
+    }
+    
+    p.hide, #gallery-tab div.hide, #videos-tab div.hide {
+        display: block !important;        
+    }
+    
+    p.continue {
+        display: none !important;
+    }
+
+    .toggle, .toggle-first, .toggle-second, .toggle-videos {
+        display: none;
+    }
+    
+    .tv-info {
+        top: -9px; 
+    }
+
+}

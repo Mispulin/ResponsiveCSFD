@@ -1,0 +1,148 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.3.2016, 9:35:58
+    Author     : krizomic
+*/
+
+#search-form-xs {
+    display: inline-block;
+}
+
+#search-icon {
+    font-size: 100%;
+}
+
+.search-text {
+    background-color: #BB0011;
+    background-image: none;
+    display: inline-block;
+    font-size: 1.2em;
+    border: 2px solid #EAA9A9;
+    height: 50px;
+    width: 90%;
+    color: #DCA2A8;
+    padding-left: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#search-area {
+ 
+}
+
+.search-area {
+/*    display: none;*/
+}
+
+.search-area form {
+  margin-top: 2%;
+}
+
+#search-area form {
+  margin-top: 0;
+}
+
+.search-area form, .search-area .input-group {
+    width: 100%;
+}
+
+.search-area .advanced-search {
+    position:relative;
+    font-size: 11px;
+    color: #f5f5f5;
+    float: right;
+    left: -4px;
+}
+
+.search-area .form-control {
+    width: 73%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: white;
+    font-size: 1em;
+    height: 28px;
+    border: 1px solid #980A0B;
+    color: #921B1B;
+}
+
+#search-area .form-control {
+    width: 85%;
+}
+
+.search-area .btn {
+    border: 1px solid #980A0B;
+    padding: 3px 7px;
+    position: relative;
+    left: -2px;
+    width: 10%;
+    min-width: 30px;
+    border-radius: 5px;
+    height: 28px;
+}
+
+#search-area .btn {
+    width: 15%;
+}
+
+.search-area #close {
+    left: -4px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+@media (min-width: 768px) {
+    
+    #search-area {
+        display: none !important;
+    }
+        
+    .search-area {
+        padding-left: 0;
+        display: block !important;
+        margin: 3.6% auto auto auto;
+    }
+
+    .search-area form {
+        width: 200px;
+    }
+
+    .search-area .advanced-search {
+        position:relative;
+        font-size: 11px;
+        color: #f5f5f5;
+        float: right;
+        left: -4px;
+    }
+
+    .search-area .input-group {
+        width: 200px;
+    }
+
+    .search-area .form-control {
+        width: 170px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        background-color: white;
+        font-size: 1em;
+        border: 1px solid #980A0B;
+        color: #921B1B;
+    }
+
+    .search-area .btn {
+        background: -webkit-linear-gradient(top bottom, #DC1112, #8A0A09);
+        background: -o-linear-gradient(top bottom, #DC1112, #8A0A09);
+        background: -moz-linear-gradient(top bottom, #DC1112, #8A0A09);
+        background: linear-gradient(to bottom, #DC1112, #8A0A09);
+        border: 1px solid #980A0B;
+        padding: 3px 7px;
+        position: relative;
+        left: -2px;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    
+}

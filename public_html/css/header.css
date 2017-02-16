@@ -1,0 +1,100 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.3.2016, 9:19:19
+    Author     : krizomic
+*/
+
+.glyphicon {
+    vertical-align: middle;
+}
+
+#header-menu-icon, #header-user-icon, #header-logo, #header-search-icon {
+    display: table-cell;
+    position: relative;
+    height: 100%;
+    color: white;
+    font-size: 6.1vw;
+    text-align: center;
+}
+
+#page-header {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    min-height: 50px;
+    background: #BB0011 url('../img/header-background.jpg') top center no-repeat;
+}
+
+#page-header button {
+    padding: 0;
+}
+
+#page-header .row {
+    min-width: 240px;
+}
+
+#page-header .row:nth-of-type(1) {
+    
+}
+
+#page-header .row > div[atribut|="header"] {
+    display: table !important;
+}
+
+#page-header img {
+    min-width: 30px;
+    max-height: 63px;
+}
+
+.private, .private:hover {
+    color: #005599;
+}
+
+#xs-menu {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 768px) {
+      
+    #header-logo {
+        display: flex !important;
+        height: 90px;
+    }    
+    
+    #page-content {
+        margin-top: 40px;
+    }
+    
+    #page-header {
+        padding-bottom: 0;
+        padding-top: 5px;
+        border-radius: 0;
+    }
+
+    #page-header #logo {
+        max-height: 57px;
+        margin-top: 15px;
+    }
+
+    #page-header .row:first {
+        min-height: 94px;
+    }
+
+    #page-header .user-photo {
+        border: none;
+        min-width: 60px;
+        min-height: 80px;
+        margin: 5px 6px 0 6px;
+        display: inline-block;
+        float: left;
+    }
+
+}

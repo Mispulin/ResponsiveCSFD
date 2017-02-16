@@ -1,0 +1,108 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 17.3.2016, 9:35:15
+    Author     : krizomic
+*/
+
+.user-photo {
+        display: inline-block;
+        margin-right: 5px;
+        margin-left: 5px;
+        position: relative;
+        height: 80px;
+        border: solid #D8CBCB;
+    }
+
+@media (min-width: 768px) {
+    
+    .menu-col {
+        height: 0;
+    }
+    
+    #user-area {
+        float: right;
+        top: -90px;
+        position: relative;
+        display: block;
+    }
+    
+    #user-area a ,
+    #user-area h4 {
+        font-size: 0.75em;
+    }
+    
+    #user-area h4 {
+        margin: 0;
+    }
+    
+    #user-menu, #user-menu-logged {        
+        display: inline-block;
+        border-radius: 5px;
+        padding: 0;
+        min-width: 100px;
+        position: relative;
+    }
+
+    #user-menu-logged {
+        background: white url('../img/user-menu-unlogged.png') no-repeat;
+        background-size: 224px 90px;
+        width: 224px;
+        height: 83px;
+    }
+
+    #user-menu {
+        background: white url('../img/user-menu-unlogged.png') no-repeat;
+        background-size: 140px 90px;
+        width: 140px;
+        height: 83px;
+        padding: 5px 0 0 5px;
+    }
+    
+    .hide-menu {
+        display: none !important;        
+    }
+
+    #user-menu ul, #user-menu-logged ul {
+        list-style-type: none;
+        background: none;
+    }
+    
+    #user-menu-logged ul {
+        display: table;
+    }
+        
+    #user-menu ul li, #user-menu-logged ul li {
+        display: block;
+        float: none;
+        height: 20px;
+        margin: 0;
+        background: none;
+        padding-left: 0;
+    }    
+    
+    #user-menu-logged ul li {
+        width: 50%;
+        display: table-cell;
+        float: left;
+        vertical-align: top;
+    }
+    
+    #user-menu-logged ul li:first-of-type {
+        display: none;
+    }
+    
+    #user-menu-logged .user-photo {
+        min-height: 90% !important;
+        min-width: auto !important;
+        margin: 5px 8px 5px 5px;
+    }
+    
+    .user-photo {
+        border: solid #D8CBCB;
+    }
+    
+}
